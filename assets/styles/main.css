@@ -104,7 +104,7 @@ body.fixed:after {
 
 
 main {
-    margin-top: 130px;
+    margin-top: 150px;
 }
 
 h1 {
@@ -210,12 +210,12 @@ header button:hover, header button:focus {
         line-height: 70px;
     }
     20% {
-        font-size: 1.2em;
+        font-size: 1.1em;
         line-height: 70px;
         opacity: 1;
     }
     100% {
-        font-size: 0.5em;
+        font-size: 1em;
         line-height: 70px;
         opacity: 0;
     }
