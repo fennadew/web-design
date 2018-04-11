@@ -191,7 +191,48 @@ header button {
     width: 120px;
     height: 70px;
     font-size: 1em;
+    line-height: 70px;
+    overflow: hidden;
+    position: relative;
+    transition: all 200ms ease;
     background-color: #FA2750;
+}
+
+
+header button:hover, header button:focus {
+     line-height: 160px;
+    outline: none;
+ }
+
+@keyframes dissapear {
+    0% {
+        font-size: 1em;
+        line-height: 70px;
+    }
+    20% {
+        font-size: 1.2em;
+        line-height: 70px;
+        opacity: 1;
+    }
+    100% {
+        font-size: 0.5em;
+        line-height: 70px;
+        opacity: 0;
+    }
+}
+
+header button.hide {
+    animation: dissapear 300ms infinite;
+}
+header button:before {
+     content: attr(data-text);
+     color: #FFF;
+     position: absolute;
+     top: -2.75em;
+ }
+
+header button.open:before {
+    content: "close";
 }
 
 a {
@@ -244,10 +285,10 @@ a {
     font-size: 1em;
 }
 
-.column a:hover figcaption, .column a:hover p {
+.column a:hover figcaption, .column a:hover p, .column a:focus figcaption, .column a:focus p  {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 300ms ease 300ms, transform 300ms ease 300ms;
+    transition: opacity 300ms ease 300ms, transform 300ms ease 200ms;
 }
 
 .column a figure {

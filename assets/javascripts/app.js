@@ -1,19 +1,32 @@
 const app = {
     init() {
         const menuButton = document.querySelector('header button');
-        menuButton.addEventListener('click', () => {
-            this.toggleMenu();
+        menuButton.addEventListener('click', (e) => {
+            this.toggleMenu(e);
         });
     },
-    toggleMenu() {
-        const nav = document.querySelector('#about-me');
+    toggleMenu(e) {
+        const menuButton = e.target;
+        const about = document.querySelector('#about-me');
         const body = document.querySelector('body');
-        if (nav.classList.contains('open')) {
-            nav.classList.remove('open');
+        if (about.classList.contains('open')) {
+            about.classList.remove('open');
             body.classList.remove('fixed');
+            menuButton.classList.add('hide');
+            setTimeout(() => {
+                menuButton.innerHTML = "About me";
+                menuButton.classList.remove('open');
+                menuButton.classList.remove('hide');
+            }, 300);
         } else {
-            nav.classList.add('open');
+            about.classList.add('open');
             body.classList.add('fixed');
+            menuButton.classList.add('hide');
+            setTimeout(() => {
+                menuButton.innerHTML = "Close";
+                menuButton.classList.add('open');
+                menuButton.classList.remove('hide');
+            }, 300);
         }
     }
 };
