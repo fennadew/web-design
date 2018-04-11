@@ -79,6 +79,30 @@ body {
     font-family: d-dindin-regular, sans-serif;
 }
 
+body.fixed {
+    position: fixed;
+    overflow: hidden;
+}
+
+body:after {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+}
+
+body.fixed:after {
+    opacity: 1;
+}
+
+
 main {
     margin-top: 130px;
 }
@@ -111,7 +135,7 @@ header {
 }
 
 #about-me {
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     background-color: #FA2750;
     height: 70px;
@@ -153,23 +177,6 @@ header {
     height: calc(100vh - 80px);
 }
 
-/*#about-me article:after {*/
-    /*z-index: -1;*/
-    /*content: "";*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*right: 0;*/
-    /*width: 100vw;*/
-    /*height: 100vh;*/
-    /*background-color: #FFF;*/
-    /*opacity: 0;*/
-    /*pointer-events: none;*/
-    /*transition: opacity 200ms ease;*/
-/*}*/
-
-#about-me.open article:after {
-    opacity: 1;
-}
 
 header button {
     z-index: 3;

@@ -7,10 +7,13 @@ const app = {
     },
     toggleMenu() {
         const nav = document.querySelector('#about-me');
+        const body = document.querySelector('body');
         if (nav.classList.contains('open')) {
             nav.classList.remove('open');
+            body.classList.remove('fixed');
         } else {
             nav.classList.add('open');
+            body.classList.add('fixed');
         }
     }
 };
