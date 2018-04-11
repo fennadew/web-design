@@ -6,7 +6,7 @@ const app = {
         });
     },
     toggleMenu() {
-        const nav = document.querySelector('header nav');
+        const nav = document.querySelector('#about-me');
         if (nav.classList.contains('open')) {
             nav.classList.remove('open');
         } else {

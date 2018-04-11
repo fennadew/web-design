@@ -69,24 +69,6 @@ table {
 
 }
 
-@font-face {
-    font-family: 'd-din_condenseddinCnBd';
-    src: url('../fonts/d-dincondensed-bold-webfont.woff2') format('woff2'),
-    url('../fonts/d-dincondensed-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'd-din_condensedregular';
-    src: url('../fonts/d-dincondensed-webfont.woff2') format('woff2'),
-    url('../fonts/d-dincondensed-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 * {
     box-sizing: border-box;
 }
@@ -107,7 +89,7 @@ h1 {
     font-size: 1.2em;
     text-transform: uppercase;
 }
-section {
+section:nth-of-type(2) > div {
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
@@ -128,34 +110,64 @@ header {
     justify-content: space-between;
 }
 
-nav {
+#about-me {
+    z-index: 1;
     position: absolute;
     background-color: #FA2750;
     height: 70px;
-    width: 70px;
+    width: 120px;
     right: 70px;
-    top: 0;
+    top: 40px;
+    overflow: hidden;
+    color: #FFF;
     transition: width 200ms ease, height 200ms ease;
 }
 
-nav.open {
+#about-me h1 {
+    display: none;
+}
+
+#about-me p {
+    opacity: 0;
+    width: 30em;
+    margin: 10px auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    transition: opacity 100ms ease 0s;
+}
+
+#about-me.open p {
+    opacity: 1;
+    transition: opacity 200ms ease 200ms;
+}
+
+#about-me article {
+    background-color: #FA2750;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#about-me.open {
     width: calc(100% - 140px);
     height: calc(100vh - 80px);
 }
 
-nav:after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #FFF;
-    opacity: 0;
-    transition: opacity 200ms ease;
-}
+/*#about-me article:after {*/
+    /*z-index: -1;*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*background-color: #FFF;*/
+    /*opacity: 0;*/
+    /*pointer-events: none;*/
+    /*transition: opacity 200ms ease;*/
+/*}*/
 
-nav.open:after {
+#about-me.open article:after {
     opacity: 1;
 }
 
@@ -167,7 +179,7 @@ header button {
     outline: none;
     cursor: pointer;
     color: #FFF;
-    width: 70px;
+    width: 120px;
     height: 70px;
     font-size: 1em;
     background-color: #FA2750;
