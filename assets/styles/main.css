@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End reset */
+
+/* Fonts */
+
+@font-face {
+    font-family: 'd-dindin-bold';
+    src: url('../fonts/d-din-bold-webfont.woff2') format('woff2'),
+    url('../fonts/d-din-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'd-dinregular';
+    src: url('../fonts/d-din-webfont.woff2') format('woff2'),
+    url('../fonts/d-din-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'd-din_condenseddinCnBd';
+    src: url('../fonts/d-dincondensed-bold-webfont.woff2') format('woff2'),
+    url('../fonts/d-dincondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'd-din_condensedregular';
+    src: url('../fonts/d-dincondensed-webfont.woff2') format('woff2'),
+    url('../fonts/d-dincondensed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-size: 1em;
+    font-family: d-dindin-regular, sans-serif;
+}
+
+main {
+    margin-top: 130px;
+}
+
+h1 {
+    font-family: d-dindin-bold, sans-serif;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+section {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 0 50px 40px;
+}
+
+header {
+    z-index: 20;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    left: 0;
+    margin-top: 40px;
+    padding: 0 70px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    position: absolute;
+    background-color: #FA2750;
+    height: 70px;
+    width: 70px;
+    right: 70px;
+    top: 0;
+    transition: width 200ms ease, height 200ms ease;
+}
+
+nav.open {
+    width: calc(100% - 140px);
+    height: calc(100vh - 80px);
+}
+
+nav:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+nav.open:after {
+    opacity: 1;
+}
+
+header button {
+    z-index: 3;
+    border: none;
+    font-family: d-dindin-bold, sans-serif;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    color: #FFF;
+    width: 70px;
+    height: 70px;
+    font-size: 1em;
+    background-color: #FA2750;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-family: d-dindin-bold, sans-serif;
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    display: block;
+    color: #000;
+}
+
+.logo img {
+    width: 50px;
+}
+
+
+.column {
+    max-width: 33.333%;
+    padding: 0 20px;
+}
+
+.column a {
+    display: block;
+}
+
+.column a figcaption, .column a p {
+    z-index: 10;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    top: 45%;
+    transform: translateY(50px);
+    text-transform: uppercase;
+    transition: opacity 300ms ease 0ms, transform 300ms ease 0ms;
+}
+.column a figcaption {
+    font-family: d-dindin-bold, sans-serif;
+    font-size: 2em;
+}
+
+.column a p {
+    margin-top: 2em;
+    font-size: 1em;
+}
+
+.column a:hover figcaption, .column a:hover p {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease 300ms, transform 300ms ease 300ms;
+}
+
+.column a figure {
+    margin: 40px 0 0;
+    position: relative;
+}
+
+.column a figure:after {
+    z-index: 3;
+    content: "";
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: height 300ms ease-in-out;
+}
+
+.column a:focus {
+    outline: none;
+}
+
+.column a:hover figure:after, .column a:focus figure:after {
+    bottom: 0;
+    height: 100%;
+}
+
+.column img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
