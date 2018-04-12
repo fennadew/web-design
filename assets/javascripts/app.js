@@ -74,17 +74,18 @@ const events = {
         const menuButton = e.target;
         domElements.about.classList.toggle('open');
         domElements.body.classList.toggle('fixed');
-        menuButton.classList.toggle('hide');
         if (domElements.about.classList.contains('open')) {
-            setTimeout(() => {
-                menuButton.innerHTML = "About me";
-                menuButton.classList.remove('open');
-                menuButton.classList.remove('hide');
-            }, 300);
-        } else {
+            menuButton.classList.add('hide');
             setTimeout(() => {
                 menuButton.innerHTML = "Close";
                 menuButton.classList.add('open');
+                menuButton.classList.remove('hide');
+            }, 300);
+        } else {
+            menuButton.classList.add('hide');
+            setTimeout(() => {
+                menuButton.innerHTML = "About me";
+                menuButton.classList.remove('open');
                 menuButton.classList.remove('hide');
             }, 300);
         }
