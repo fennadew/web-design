@@ -49,6 +49,16 @@ const events = {
         domElements.modal.classList.add('open');
     },
     showContent() {
+        if (this.currentImg === 0) {
+            domElements.back.classList.add('hide')
+            domElements.next.classList.remove('hide');
+        } else if (this.currentImg === domElements.images.length -1) {
+            domElements.back.classList.remove('hide')
+            domElements.next.classList.add('hide')
+        } else {
+            domElements.back.classList.remove('hide')
+            domElements.next.classList.remove('hide');
+        }
         domElements.modalImg.src = domElements.images[this.currentImg].querySelector('img').src;
     },
     toggleMenu(e) {

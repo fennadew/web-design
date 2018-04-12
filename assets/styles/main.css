@@ -388,6 +388,9 @@ a {
 .navigation.right {
     background-image: url("../images/next.svg");
 }
+.navigation.hide {
+    display: none;
+}
 
 @media screen and (max-width: 1000px) {
     .column a figure {
