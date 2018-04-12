@@ -17,6 +17,9 @@ const app = {
                 domElements.modal.classList.remove('open');
             }
         });
+        domElements.modalCLose.addEventListener('click', function(e){
+                domElements.modal.classList.remove('open');
+        });
         domElements.back.addEventListener('click', function(e){
                 if(events.currentImg > 0) {
                     events.currentImg -= 1;
@@ -39,8 +42,11 @@ const domElements = {
     images: document.querySelectorAll('.showcase a'),
     modal: document.querySelector('.modal'),
     modalImg: document.querySelector('.modal img'),
+    modalHeading: document.querySelector('.modal h2'),
+    modalText: document.querySelector('.modal p'),
     back: document.querySelector('.navigation.left'),
     next: document.querySelector('.navigation.right'),
+    modalCLose: document.querySelector('.navigation.close'),
 }
 
 const events = {
@@ -59,7 +65,10 @@ const events = {
             domElements.back.classList.remove('hide')
             domElements.next.classList.remove('hide');
         }
+
         domElements.modalImg.src = domElements.images[this.currentImg].querySelector('img').src;
+        domElements.modalHeading.innerHTML = domElements.images[this.currentImg].querySelector('figcaption').innerHTML;
+        domElements.modalText.innerHTML = domElements.images[this.currentImg].querySelector('p').innerHTML;
     },
     toggleMenu(e) {
         const menuButton = e.target;
