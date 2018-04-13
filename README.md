@@ -8,8 +8,10 @@ I have chosen this principle because this is one of the most important principle
 The images on the website take a lot of attention. This is intended to view the images as the main goal of the website. After all, it is a portfolio.
 
 ### 2. Progressive disclosure
+The home page has a purpose, namely to show photos. When the user chooses to learn more about the photographer, there is an action for this, but when this is clicked on, the user is separated from the rest of the website. This way your user knows where he is and also the consequences of his action. He can only see what had to do with that action. He can easily return to the overview to press the closing button.
 
-### 4. Clarity is job #1
+### 3. Clarity is job #1
+
 
 ## Feedback 
 ### Cas
