@@ -1,5 +1,7 @@
 # Web-design
-For this course I have build a fake portfolio website. All images are from [Pexels](https://www.pexels.com/). 
+For this course I have build a fake portfolio website. All images are from [Pexels](https://www.pexels.com/). I made this website using 3 design principles by Joshua Porter.
+
+![Gif of website](https://github.com/fennadew/web-design/blob/master/assets/images/gif2.gif)
 
 ## Getting started
 Here is how to get started:
@@ -16,7 +18,7 @@ The images on the website take a lot of attention. This is intended to view the 
 The home page has a purpose, namely to show photos. When the user chooses to learn more about the photographer, there is an action for this, but when this is clicked on, the user is separated from the rest of the website. This way your user knows where he is and also the consequences of his action. He can only see what had to do with that action. He can easily return to the overview to press the closing button.
 
 ### 3. Clarity is job #1
-
+There is only one title visible on the page. You know what you will do there. Because there is latest work, and below you can see pictures, you know that it is about a photographer. There is also a about me button. This is clearly to be found and speaks for itself. You will receive more information about the photographer. The hover effect about the images indicates that you can click on them.
 
 ## Feedback 
 ### Cas
@@ -45,6 +47,8 @@ The home page has a purpose, namely to show photos. When the user chooses to lea
 * [ ] Test for accessibility
 * [ ] Improve perfomance
 * [ ] Feature detection
+* [ ] Fully responsive
+* [ ] Focus and hover states on the next and previous button
 * [ ] Better animations
 
 ## Resources
