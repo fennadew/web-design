@@ -1,6 +1,11 @@
 # Web-design
 For this course I have build a fake portfolio website. All images are from [Pexels](https://www.pexels.com/). 
 
+## Getting started
+Here is how to get started:
+1. Download or clone the repo `git clone https://github.com/fennadew/web-design.git`
+2. No need to install any dependencies! This is all you need.
+  
 ## 3 Design Principles
 ### 1. Strong visual hierarchies work best
 I have chosen this principle because this is one of the most important principles. This ensures that things are easier to read. You also know more quickly what things are for and what is more important. I have applied this principle by applying strong visual hierarchy to texts. For example, I chose a bold fontweight for all titles, and also a larger font size for the titles. For the normal text I have chosen a somewhat easier and lighter font-size so that it is easier to read.
