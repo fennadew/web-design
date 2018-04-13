@@ -2,20 +2,21 @@
 For this course I have build a fake portfolio website. All images are from [Pexels](https://www.pexels.com/). 
 
 
-## Feedback Cas
+
+## Feedback 
+### Cas
 * Title can be slightly bigger
 * A little more padding on top of the title
 * Hover and focus states on the buttons
 * Do the information animation on the hover states on the images faster.
 
-## Feedback Chana
+### Chana
 * A little more padding on top of the title
 * Change menu in About me
 
-## Feedback Sam
+### Feedback Sam
 * The centering is off?
 * Close and About me are switched.
-
 
 ## Modifications
 * [X] Added hover and focus styles
@@ -25,12 +26,11 @@ For this course I have build a fake portfolio website. All images are from [Pexe
 * [x] Fixed the About me/Close button
 * [x] Fixed the centering issue
 
-
 ## Future 
-* Test for accessibility
-* Improve perfomance
-* Feature detection
-* Better animations
+* [ ] Test for accessibility
+* [ ] Improve perfomance
+* [ ] Feature detection
+* [ ] Better animations
 
 ## Resources
 * [Images](https://www.pexels.com/)
