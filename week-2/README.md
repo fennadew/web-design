@@ -51,4 +51,4 @@ App listens on `http://localhost:8080/`.
 
 
 ## Resources
-[presentation deaf people]: https://interaction18.ixda.org/program/talk-designing-for-deaf-people--for-everyone-actually-van-driessche-marie/
+* [presentation deaf people](https://interaction18.ixda.org/program/talk-designing-for-deaf-people--for-everyone-actually-van-driessche-marie/)
