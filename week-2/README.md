@@ -5,7 +5,7 @@ This is my portfolio website. It's specially made for Marie Driessche. She is de
 ## Table of Content
 - [Getting started](#getting-started)
 - [Job stories](#job-stories)
-- [Best practice blind people](#best-practice-blind-people )
+- [Best practice blind people](#best-practice-blind-people-by-marie-van-driessche )
 - [Resources](#resources)
 
 
@@ -21,7 +21,9 @@ App listens on `http://localhost:8080/`.
 
 
 ## Job stories
-
+- When I need to contact a company, I want to have multiple contact options on the website, so I can choice the right option for me
+- When I visit a website that is not written in my first language, I want to have summarized content with not to much jargon, so I can understand the content easily
+- When I watch video's online, I want to have (real) subtitles, so I can understand what they are saying.
 
 
 ## Best practice for deaf people by Marie van Driessche
