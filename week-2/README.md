@@ -5,7 +5,7 @@ This is my portfolio website. It's specially made for Marie Driessche. She is de
 ## Table of Content
 - [Getting started](#getting-started)
 - [Job stories](#job-stories)
-- [Best practice blind people](#best-practice-blind-people-by-marie-van-driessche )
+- [Best practice deaf people](#best-practice-deaf-people-by-marie-van-driessche )
 - [Resources](#resources)
 
 
