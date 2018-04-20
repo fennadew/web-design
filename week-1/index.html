@@ -12,7 +12,7 @@
 <body>
 <header>
     <a href="index.html" class="logo"><img src="assets/images/logo-pink.svg" alt="logo"></a>
-    <button>About me</button>
+    <button data-text="About me">About me</button>
 </header>
 <main>
     <section id="about-me">
@@ -26,7 +26,7 @@
                 happy.</p>
         </article>
     </section>
-    <section>
+    <section class="showcase">
         <h1>Latest work</h1>
         <div>
             <div class="column">
@@ -120,6 +120,16 @@
                 </a>
             </div>
         </div>
+    </section>
+    <section class="modal">
+        <button class="navigation left">Back</button>
+        <div class="modal-content">
+            <img src="assets/images/3.jpg">
+            <h2>New York</h2>
+            <p>26-07-2017</p>
+        </div>
+        <button class="navigation right">Next</button>
+        <button class="navigation close">Close</button>
     </section>
 </main>
 <script src="assets/javascripts/app.js"></script>

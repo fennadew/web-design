@@ -101,16 +101,19 @@ body:after {
 body.fixed:after {
     opacity: 1;
 }
-
+.column a figcaption, h2 {
+    font-family: d-dindin-bold, sans-serif;
+    font-size: 2em;
+}
 
 main {
-    margin-top: 130px;
+    margin-top: 150px;
 }
 
 h1 {
     font-family: d-dindin-bold, sans-serif;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 2.5em;
     text-transform: uppercase;
 }
 section:nth-of-type(2) > div {
@@ -136,7 +139,7 @@ header {
 
 #about-me {
     z-index: 10;
-    position: absolute;
+    position: fixed;
     background-color: #FA2750;
     height: 70px;
     width: 120px;
@@ -153,7 +156,8 @@ header {
 
 #about-me p {
     opacity: 0;
-    width: 30em;
+    width: 90%;
+    max-width: 30em;
     margin: 10px auto;
     transform: translateY(100%);
     font-family: 'Montserrat', sans-serif;
@@ -179,19 +183,62 @@ header {
     height: calc(100vh - 80px);
 }
 
-
-header button {
-    z-index: 3;
-    border: none;
+button {
     font-family: d-dindin-bold, sans-serif;
     text-transform: uppercase;
     outline: none;
     cursor: pointer;
     color: #FFF;
+    border: none;
+    font-size: 1em;
+    line-height: 70px;
+    background-color: #FA2750;
+}
+
+header button {
+    z-index: 3;
     width: 120px;
     height: 70px;
-    font-size: 1em;
-    background-color: #FA2750;
+    overflow: hidden;
+    position: relative;
+    transition: all 200ms ease;
+}
+
+
+ button:hover,  button:focus {
+     line-height: 160px;
+    outline: none;
+ }
+
+@keyframes dissapear {
+    0% {
+        font-size: 1em;
+        line-height: 70px;
+    }
+    20% {
+        font-size: 1.1em;
+        line-height: 70px;
+        opacity: 1;
+    }
+    100% {
+        font-size: 1em;
+        line-height: 70px;
+        opacity: 0;
+    }
+}
+
+header button.hide {
+    animation: dissapear 300ms infinite;
+}
+header button:before {
+     content: attr(data-text);
+     color: #FFF;
+     position: absolute;
+     top: -2.75em;
+ }
+
+header button.open:before {
+    content: "close";
 }
 
 a {
@@ -234,20 +281,17 @@ a {
     text-transform: uppercase;
     transition: opacity 300ms ease 0ms, transform 300ms ease 0ms;
 }
-.column a figcaption {
-    font-family: d-dindin-bold, sans-serif;
-    font-size: 2em;
-}
+
 
 .column a p {
     margin-top: 2em;
     font-size: 1em;
 }
 
-.column a:hover figcaption, .column a:hover p {
+.column a:hover figcaption, .column a:hover p, .column a:focus figcaption, .column a:focus p  {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 300ms ease 300ms, transform 300ms ease 300ms;
+    transition: opacity 300ms ease 300ms, transform 300ms ease 200ms;
 }
 
 .column a figure {
@@ -280,18 +324,134 @@ a {
     display: block;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+.modal img {
+    max-height: calc(100vh - 170px);
+    max-width: calc(100vw - 450px);
+}
+
+.modal {
+    position: fixed;
+    transform: scale(0);
+    display: flex;
+    opacity: 0;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    transition: transform 0ms, opacity 200ms ease 10ms;
+}
+
+.modal.open {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal.open .modal-content {
+    transform: scale(1);
+}
+
+/* Modal Content */
+.modal-content {
+    transform: scale(0);
+    text-align: center;
+    background-color: #FFF;
+    padding: 1em;
+    transition: transform 100ms ease 200ms;
+}
+
+.modal-content h2 {
+    padding-top: 3px;
+}
+
+.navigation {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    margin: 15px;
+    padding: 0;
+    text-indent: -399px;
+    overflow: hidden;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.navigation.left {
+    left: 55px;
+    background-image: url("../images/back.svg");
+}
+.navigation.right {
+    right: 55px;
+    background-image: url("../images/next.svg");
+}
+.navigation.close {
+    top: 25px;
+    text-indent: 0;
+    width: 120px;
+    right: 55px;
+    transition: all 200ms ease;
+}
+
+.navigation.close:before {
+    content: "Close";
+    color: #FFF;
+    position: absolute;
+    top: -2.75em;
+}
+
+.navigation.hide {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .column a figure {
+        margin: 20px 0 0;
+    }
     .column {
-        flex: 50%;
-        max-width: 50%;
+        padding: 0 10px;
+    }
+    header {
+        padding: 0 60px 20px;
+    }
+    #about-me {
+        right: 60px;
+    }
+    #about-me.open {
+        width: calc(100% - 120px);
+        height: calc(100vh - 80px);
     }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
+    section:nth-of-type(2) > div {
+        flex-wrap: wrap;
+    }
     .column {
-        flex: 100%;
+        width: 100%;
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .column a figure {
+        margin: 20px 0 0;
+    }
+    .column {
+        padding: 0 10px;
+    }
+    header {
+        padding: 0 30px 20px;
+    }
+    header button {
+        height: 44px;
+        line-height: 44px;
     }
 }

@@ -1,0 +1,19 @@
+@import "base/variables";
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background-color: #F9F9F9;
+  font-size: $base-font-size;
+  color: $base-color;
+}
+
+h1, h2, h3 {
+  font-family: $base-font;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
