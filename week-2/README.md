@@ -1,14 +1,15 @@
-# Boilerplate HTML, SASS, ES6 & Gulp
-*   [x] SCSS Compiler and minifier: Gulp-sass
-*   [x] JS bundler: Browserify
-*   [x] JS compiler: Babelify
-*   [x] JS minifier: Uglify
-*   [x] Task manager: Gulp
-*   [x] Auto reload: Gulp-connect
-*   [x] Image minifier: Gulp-magemin
+# Portfolio
+This is my portfolio website. It's specially made for Marie Driessche. She is deaf. To make it more usefull for her, I added some icons to my website so she doesn't have to read everything. I used a lot of white spacing, headings and not a lot of content, Because she wants to have a quick overview of the content, and not spend to much time on a website.
 
-## Get started
 
+## Table of Content
+- [Getting started](#getting-started)
+- [Job stories](#job-stories)
+- [Best practice blind people](#best-practice-blind-people )
+- [Resources](#resources)
+
+
+## Getting started
 * Run `$ git clone https://github.com/fennadew/boilerplate-html.git` in your terminal in the desired directory.
 
 * `cd` to the repository
@@ -18,26 +19,25 @@
 * Run `npm start` or `gulp` to start the server.
 App listens on `http://localhost:8080/`.
 
-## Best practice
-* Use semicolons
-* Write in ES6
-* Use const if possible, let when needed.
 
-## To do
-*   [ ] Add polyfill for Promises
+## Job stories
 
-## License
-MIT © Fenna de Wilde
+
+
+## Best practice for deaf people by Marie van Driessche
+* Use headings and subheadings
+* Make one point per paragraph
+* Use short sentences: seven words per paragraph
+* Use bullet list
+* Use easy accessible languages
+* Write in journalistic style, make your point and then explain it
+* Write in active form
+* Avoid unnecessary jargon and slang
+* Use images and diagrams
+* Use blank spaces
+* Use a glossary for specialised vocabulary 
+* Mulitple contact options 
+
 
 ## Resources
-* [Babel](https://babeljs.io)
-* [Gulp-sass](https://www.npmjs.com/package/gulp-sass)
-* [Uglify-js](https://www.npmjs.com/package/uglify-js)
-* [Browserify](http://browserify.org/)
-* [Gulp](https://gulpjs.com/)
-* [Gulp-connect](https://www.npmjs.com/package/gulp-connect)
-* [Gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
-
-
-
-
+[presentation deaf people]: https://interaction18.ixda.org/program/talk-designing-for-deaf-people--for-everyone-actually-van-driessche-marie/
