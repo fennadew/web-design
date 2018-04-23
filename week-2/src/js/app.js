@@ -8,6 +8,9 @@ const app = {
             class_loaded: 'll-loaded',
             class_error: 'll-error',
         });
+        setTimeout(() => {
+            domElements.filter.classList.add('open');
+        }, 1000)
         domElements.menuButton.addEventListener('click', (e) => {
             events.toggleMenu(e);
         });
@@ -99,15 +102,14 @@ const domElements = {
     selectbox: document.querySelectorAll('.selectbox'),
     checkboxesTheme: document.getElementsByName("theme"),
     checkboxesContinent: document.getElementsByName("continents"),
-    counts: document.querySelectorAll("form span"),
+    counts: document.querySelectorAll(".filter-small span"),
+    filter: document.querySelector('.filter')
 }
 
 const filter = {
     themeCount: 0,
     continentCount: 0,
     showSelection(name) {
-        console.log(name)
-
         if (name === 'theme') {
             if (this.themeCount === 0) {
                 domElements.counts[0].classList.add('hidden');

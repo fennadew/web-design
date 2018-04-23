@@ -18,60 +18,62 @@
     <section id="about-me">
         <article>
             <h1>About me</h1>
+            <img src="dist/images/fenna.png" alt="Photo of me">
             <p>My name is Fenna de Wilde. I am a 21 year old Communication & Multimedia student at the Hogeschool van
-                Amsterdam. I am currently in my third year, where I want to grow as a front-end developer.
-            <p>During my first year of education, I learned a lot about UX, interaction design, front-end development,
-                design research and much more.</p>
+                Amsterdam. I am currently in my third year, where I want to grow as a front-end developer.</p>
+            <a href="mailto:fennadewilde@hotmail.com" data-text="Email me">Email me</a>
+            <a href="tel:+31651753127" data-text="Call me">Call me</a>
             <p><q>&quot;For me to be in a creative environment while doing something technical is something that makes
                 me more than
                 happy.&quot;</q></p>
-            <a href="mailto:fennadewilde@hotmail.com">Email me</a>
-            <a href="tel:+31651753127">Call me</a>
         </article>
     </section>
     <section class="showcase">
         <h1>Latest work</h1>
-        <aside class="filter">
-            <form>
-                <div class="selectbox">
-                    <button>Sort</button>
-                    <label>Latest
-                        <select>
-                            <option value="latest">Latest</option>
-                            <option value="first">First</option>
-                            <option value="favorites">My favorites</option>
-                        </select></label>
-                </div>
-                <div class="selectbox">
-                    <button>Theme's</button>
-                    <span class="hidden"></span>
-                    <div>
-                        <input type="checkbox" name="theme" value="people" id="people"><label for="people">People</label>
-                        <input type="checkbox" name="theme" value="food" id="food"><label for="food">Food</label>
-                        <input type="checkbox" name="theme" value="cities" id="cities"><label for="cities">Cities</label>
-                        <input type="checkbox" name="theme" value="food" id="nature"><label for="nature">Nature</label>
+        <section class="filter">
+            <div>
+                <h1>Hey,<br> Welcome to my photography portfolio</h1>
+                <form>
+                    <div class="selectbox">
+                        <h2>What would you like to see</h2>
+                        <div>
+                            <input type="checkbox" name="theme" value="people" id="people1"><label
+                                for="people1"><span><img src="dist/images/people.svg"></span>People</label>
+                            <input type="checkbox" name="theme" value="food" id="food1"><label for="food1"><span><img
+                                src="dist/images/fruit.svg"></span>Food</label>
+                            <input type="checkbox" name="theme" value="cities" id="cities1"><label
+                                for="cities1"><span><img src="dist/images/cityscape.svg"></span>Cities</label>
+                            <input type="checkbox" name="theme" value="food" id="nature1"><label
+                                for="nature1"><span><img src="dist/images/park.svg"></span>Nature</label>
+                        </div>
                     </div>
-                </div>
-                <div  class="selectbox">
-                    <button>Continents</button>
-                    <span class="hidden"></span>
-                    <div>
-                        <input type="checkbox" name="continents" value="people" id="africa"><label for="africa">Africa</label>
-                        <input type="checkbox" name="continents" value="food" id="europe"><label for="europe">Europe</label>
-                        <input type="checkbox" name="continents" value="cities" id="asia"><label for="asia">Asia</label>
-                        <input type="checkbox" name="continents" value="food" id="north-america"><label for="north-america">North America</label>
-                        <input type="checkbox" name="continents" value="food" id="south-america"><label for="south-america">South America</label>
-                        <input type="checkbox" name="continents" value="food" id="australia"><label for="australia">Australia</label>
+                    <div class="selectbox center">
+                        <h2>Which places</h2>
+                        <div>
+                            <input type="checkbox" name="continents" value="people" id="africa1"><label for="africa1">Africa</label>
+                            <input type="checkbox" name="continents" value="food" id="europe1"><label for="europe1">Europe</label>
+                            <input type="checkbox" name="continents" value="cities" id="asia1"><label
+                                for="asia1">Asia</label>
+                            <input type="checkbox" name="continents" value="food" id="north-america1"><label
+                                for="north-america1">North-America</label>
+                            <input type="checkbox" name="continents" value="food" id="south-america1"><label
+                                for="south-america1">South-America</label>
+                            <input type="checkbox" name="continents" value="food" id="australia1"><label
+                                for="australia1">Australia</label>
+                        </div>
                     </div>
-                </div>
-                <div  class="selectbox">
-                    <button>
-                        Date
-                    </button>
-                </div>
-            </form>
-        </aside>
-        <aside>
+                    <div class="selectbox">
+                        <h2>Sort by</h2>
+                        <div><input type="radio" name="sort" value="latest" id="latest1"><label
+                                for="latest1">Latest</label>
+                            <input type="radio" name="sort" value="oldest" id="oldest1"><label
+                                    for="oldest1">Oldest</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <aside class="filter-small">
             <!--<button>Filter</button>-->
             <form>
                 <div class="selectbox">
@@ -87,25 +89,31 @@
                     <button>Theme's</button>
                     <span class="hidden"></span>
                     <div>
-                        <input type="checkbox" name="theme" value="people" id="people"><label for="people">People</label>
+                        <input type="checkbox" name="theme" value="people" id="people"><label
+                            for="people">People</label>
                         <input type="checkbox" name="theme" value="food" id="food"><label for="food">Food</label>
-                        <input type="checkbox" name="theme" value="cities" id="cities"><label for="cities">Cities</label>
+                        <input type="checkbox" name="theme" value="cities" id="cities"><label
+                            for="cities">Cities</label>
                         <input type="checkbox" name="theme" value="food" id="nature"><label for="nature">Nature</label>
                     </div>
                 </div>
-                <div  class="selectbox">
+                <div class="selectbox">
                     <button>Continents</button>
                     <span class="hidden"></span>
                     <div>
-                        <input type="checkbox" name="continents" value="people" id="africa"><label for="africa">Africa</label>
-                        <input type="checkbox" name="continents" value="food" id="europe"><label for="europe">Europe</label>
+                        <input type="checkbox" name="continents" value="people" id="africa"><label
+                            for="africa">Africa</label>
+                        <input type="checkbox" name="continents" value="food" id="europe"><label
+                            for="europe">Europe</label>
                         <input type="checkbox" name="continents" value="cities" id="asia"><label for="asia">Asia</label>
-                        <input type="checkbox" name="continents" value="food" id="north-america"><label for="north-america">North America</label>
-                        <input type="checkbox" name="continents" value="food" id="south-america"><label for="south-america">South America</label>
+                        <input type="checkbox" name="continents" value="food" id="north-america"><label
+                            for="north-america">North America</label>
+                        <input type="checkbox" name="continents" value="food" id="south-america"><label
+                            for="south-america">South America</label>
                         <input type="checkbox" name="continents" value="food" id="australia"><label for="australia">Australia</label>
                     </div>
                 </div>
-                <div  class="selectbox">
+                <div class="selectbox">
                     <button>
                         Date
                     </button>
@@ -139,7 +147,7 @@
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/20_tn.jpg" data-src="dist/images/20.jpeg">
+                        <img src="dist/images/thumbnails/20_tn.jpg" data-src="dist/images/20.png">
                     </figure>
                 </a>
                 <a href="#">
@@ -160,7 +168,7 @@
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/23_tn.jpg" data-src="dist/images/23.jpeg">
+                        <img src="dist/images/thumbnails/23_tn.jpg" data-src="dist/images/23.png">
                     </figure>
                 </a>
                 <a href="#">
