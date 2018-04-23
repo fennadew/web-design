@@ -10,6 +10,7 @@ const app = {
         });
         setTimeout(() => {
             domElements.filter.classList.add('open');
+            domElements.body.classList.add('fixed');
         }, 1000)
         domElements.menuButton.addEventListener('click', (e) => {
             events.toggleMenu(e);
@@ -23,13 +24,22 @@ const app = {
                 }
             })(i));
         }
+        for (let i = 0; i < domElements.radioButtons.length; i++) {
+            domElements.radioButtons[i].addEventListener('click', (e) => {
+                filter.hideFilterBox();
+            });
+        }
 
-        for (let i = 0; i < domElements.checkboxesContinent.length; i++) {
+        let continentHalf = domElements.checkboxesContinent.length / 2;
+
+        for (let i = 0; i < continentHalf; i++) {
             domElements.checkboxesContinent[i].addEventListener('click', ((i) => {
                 return function () {
                     if (domElements.checkboxesContinent[i].checked) {
+                        domElements.checkboxesContinent[continentHalf + i].checked = true;
                         filter.continentCount += 1
                     } else {
+                        domElements.checkboxesContinent[continentHalf + i].checked = false;
                         filter.continentCount -= 1
                     }
                     filter.showSelection('continent');
@@ -37,12 +47,46 @@ const app = {
             })(i));
         }
 
-        for (let i = 0; i < domElements.checkboxesTheme.length; i++) {
+        for (let i = continentHalf; i < domElements.checkboxesContinent.length; i++) {
+            domElements.checkboxesContinent[i].addEventListener('click', ((i) => {
+                return function () {
+                    if (domElements.checkboxesContinent[i].checked) {
+                        domElements.checkboxesContinent[i - continentHalf].checked = true;
+                        filter.continentCount += 1
+                    } else {
+                        domElements.checkboxesContinent[i - continentHalf].checked = false;
+                        filter.continentCount -= 1
+                    }
+                    filter.showSelection('continent');
+                }
+            })(i));
+        }
+
+        let themeHalf = domElements.checkboxesTheme.length / 2;
+
+        for (let i = 0; i < themeHalf; i++) {
             domElements.checkboxesTheme[i].addEventListener('click', ((i) => {
                 return function () {
                     if (domElements.checkboxesTheme[i].checked) {
+                        domElements.checkboxesTheme[themeHalf + i].checked = true;
                         filter.themeCount += 1
                     } else {
+                        domElements.checkboxesTheme[themeHalf + i].checked = false;
+                        filter.themeCount -= 1
+                    }
+                    filter.showSelection('theme');
+                }
+            })(i));
+        }
+
+        for (let i = themeHalf; i < domElements.checkboxesTheme.length; i++) {
+            domElements.checkboxesTheme[i].addEventListener('click', ((i) => {
+                return function () {
+                    if (domElements.checkboxesTheme[i].checked) {
+                        domElements.checkboxesTheme[i - themeHalf].checked = true;
+                        filter.themeCount += 1
+                    } else {
+                        domElements.checkboxesTheme[i - themeHalf].checked = false;
                         filter.themeCount -= 1
                     }
                     filter.showSelection('theme');
@@ -99,16 +143,19 @@ const domElements = {
     next: document.querySelector('.navigation.right'),
     modalCLose: document.querySelector('.navigation.close'),
     selectboxButton: document.querySelectorAll('.selectbox button'),
-    selectbox: document.querySelectorAll('.selectbox'),
+    selectbox: document.querySelectorAll('.filter-small .selectbox'),
     checkboxesTheme: document.getElementsByName("theme"),
     checkboxesContinent: document.getElementsByName("continents"),
+    allCheckboxes: document.querySelectorAll('.selectbox input[type="checkbox"'),
     counts: document.querySelectorAll(".filter-small span"),
-    filter: document.querySelector('.filter')
+    filter: document.querySelector('.filter'),
+    radioButtons: document.querySelectorAll('input[type="radio"')
 }
 
 const filter = {
     themeCount: 0,
     continentCount: 0,
+    checkcount: 0,
     showSelection(name) {
         if (name === 'theme') {
             if (this.themeCount === 0) {
@@ -126,8 +173,69 @@ const filter = {
                 domElements.counts[1].innerHTML = this.continentCount;
             }
         }
-    }
 
+        let checkboxesChecked = [];
+        let countTheme = 0;
+        let countContinent = 0;
+
+        for (let i = 0; i < domElements.allCheckboxes.length; i++) {
+            if (domElements.allCheckboxes[i].checked) {
+                checkboxesChecked.push(domElements.allCheckboxes[i]);
+                if (domElements.allCheckboxes[i].name === "theme") {
+                    countTheme += 1;
+                } else {
+                    countContinent += 1;
+                }
+            }
+        }
+
+
+        for (let a = 0; a < domElements.images.length; a++) {
+            if (checkboxesChecked.length > 0) {
+                domElements.images[a].classList.add('hidden');
+
+            } else {
+                domElements.images[a].classList.remove('hidden');
+            }
+        }
+
+        for (let a = 0; a < domElements.images.length; a++) {
+            let dataTheme = false;
+            let dataContinent = false;
+            for (let i = 0; i < checkboxesChecked.length; i++) {
+                if (countTheme > 0) {
+                    if (domElements.images[a].getAttribute('data-theme') === checkboxesChecked[i].value) {
+                        dataTheme = true;
+                    }
+                } else {
+                    dataTheme = true;
+                }
+                if (countContinent > 0) {
+                    if (domElements.images[a].getAttribute('data-continent') === checkboxesChecked[i].value) {
+                        dataContinent = true;
+                    }
+                } else {
+                    dataContinent = true;
+                }
+            }
+            if (dataTheme && dataContinent) {
+                domElements.images[a].classList.remove('hidden')
+            }
+        }
+        this.hideFilterBox();
+    },
+    hideFilterBox(){
+        for(let i = 0; i < domElements.radioButtons.length; i++) {
+            if(domElements.radioButtons[i].checked) {
+                this.checkcount = 1;
+            }
+        }
+
+        if (this.themeCount > 0 && this.continentCount > 0 && this.checkcount > 0) {
+            domElements.filter.classList.remove('open');
+            domElements.body.classList.remove('fixed');
+        }
+    }
 };
 
 const events = {
@@ -155,6 +263,7 @@ const events = {
         const menuButton = e.target;
         domElements.about.classList.toggle('open');
         domElements.body.classList.toggle('fixed');
+        domElements.body.classList.toggle('white');
         if (domElements.about.classList.contains('open')) {
             menuButton.classList.add('hide');
             setTimeout(() => {

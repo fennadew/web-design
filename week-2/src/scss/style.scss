@@ -82,7 +82,7 @@ body {
     pointer-events: none;
     transition: opacity 200ms ease;
   }
-  &.fixed:after {
+  &.fixed.white:after {
     opacity: 1;
   }
 }
@@ -141,7 +141,6 @@ header {
   justify-content: space-between;
 }
 
-
 .filter {
   z-index: 6;
   position: fixed;
@@ -150,7 +149,7 @@ header {
   height: 100vh;
   transform: translateY(-100%);
   top: 0;
-  transition: transform 1s ease;
+  transition: transform 1s ease 500ms;
   &.open {
     transform: translateY(0);
     transition: transform 1s ease;
@@ -196,7 +195,6 @@ header {
   input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
     border: 2px solid $action-color;
     opacity: 1;
-    color: $action-color;
   }
   input[type="radio"] + label {
     border: 2px solid #000;
@@ -208,7 +206,7 @@ header {
     opacity: 0.5;
   }
 
-    span {
+  span {
     display: block;
     width: 25px;
     height: 29px;
@@ -249,7 +247,7 @@ header {
     text-transform: uppercase;
     padding: 0 10px;
     width: 300px;
-    margin:  10px auto;
+    margin: 10px auto;
     text-align: center;
     white-space: nowrap;
     transform: translateY(150%);
@@ -323,7 +321,7 @@ header {
     position: relative;
     height: 35px;
     border: 2px solid #000;
-    width: 25%;
+    width: 100%;
     background: #FFF;
     cursor: pointer;
     overflow: hidden;
@@ -336,7 +334,7 @@ header {
   }
   input[type="checkbox"] + label {
     padding: 10px 25px;
-    input[type="checkbox"] + label:before {
+    &:before {
       content: '';
       width: 15px;
       height: 15px;
@@ -348,10 +346,9 @@ header {
       bottom: 0;
       margin: auto;
     }
-
-    input[type="checkbox"]:checked + label:before {
-      background: $action-color;
-    }
+  }
+  input[type="checkbox"]:checked + label:before {
+    background: $action-color;
   }
 }
 
@@ -365,7 +362,6 @@ input[type="checkbox"] + label, input[type="radio"] + label {
   position: relative;
   cursor: pointer;
 }
-
 
 select {
   -webkit-appearance: button;
@@ -411,10 +407,9 @@ form button:hover, form button:focus {
   color: $action-color;
   padding: 3px 6px;
   border: 2px solid $action-color;
-}
-
-.hidden {
-  display: none;
+  &.hidden {
+    display: none;
+  }
 }
 
 button:hover, button:focus {
@@ -481,6 +476,17 @@ a {
   }
   a {
     display: block;
+    opacity: 1;
+    width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    transition: all 1s ease;
+
+    &.hidden {
+      width: 0;
+      max-height: 0;
+      opacity: 0;
+    }
     &:focus {
       outline: none;
     }
@@ -526,6 +532,7 @@ a {
       }
     }
   }
+
   img {
     max-width: 100%;
     width: 100%;
@@ -538,6 +545,7 @@ a {
       transition: 800ms -webkit-filter linear;
     }
   }
+
 }
 
 .modal {

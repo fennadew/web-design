@@ -41,24 +41,24 @@
                                 for="people1"><span><img src="dist/images/people.svg"></span>People</label>
                             <input type="checkbox" name="theme" value="food" id="food1"><label for="food1"><span><img
                                 src="dist/images/fruit.svg"></span>Food</label>
-                            <input type="checkbox" name="theme" value="cities" id="cities1"><label
+                            <input type="checkbox" name="theme" value="city" id="cities1"><label
                                 for="cities1"><span><img src="dist/images/cityscape.svg"></span>Cities</label>
-                            <input type="checkbox" name="theme" value="food" id="nature1"><label
+                            <input type="checkbox" name="theme" value="nature" id="nature1"><label
                                 for="nature1"><span><img src="dist/images/park.svg"></span>Nature</label>
                         </div>
                     </div>
                     <div class="selectbox center">
                         <h2>Which places</h2>
                         <div>
-                            <input type="checkbox" name="continents" value="people" id="africa1"><label for="africa1">Africa</label>
-                            <input type="checkbox" name="continents" value="food" id="europe1"><label for="europe1">Europe</label>
-                            <input type="checkbox" name="continents" value="cities" id="asia1"><label
+                            <input type="checkbox" name="continents" value="africa" id="africa1"><label for="africa1">Africa</label>
+                            <input type="checkbox" name="continents" value="europe" id="europe1"><label for="europe1">Europe</label>
+                            <input type="checkbox" name="continents" value="asia" id="asia1"><label
                                 for="asia1">Asia</label>
-                            <input type="checkbox" name="continents" value="food" id="north-america1"><label
+                            <input type="checkbox" name="continents" value="north-america" id="north-america1"><label
                                 for="north-america1">North-America</label>
-                            <input type="checkbox" name="continents" value="food" id="south-america1"><label
+                            <input type="checkbox" name="continents" value="south-america" id="south-america1"><label
                                 for="south-america1">South-America</label>
-                            <input type="checkbox" name="continents" value="food" id="australia1"><label
+                            <input type="checkbox" name="continents" value="australia" id="australia1"><label
                                 for="australia1">Australia</label>
                         </div>
                     </div>
@@ -77,6 +77,34 @@
             <!--<button>Filter</button>-->
             <form>
                 <div class="selectbox">
+                    <button>Theme's</button>
+                    <span class="hidden"></span>
+                    <div>
+                        <input type="checkbox" name="theme" value="people" id="people"><label
+                            for="people">People</label>
+                        <input type="checkbox" name="theme" value="food" id="food"><label for="food">Food</label>
+                        <input type="checkbox" name="theme" value="city" id="cities"><label
+                            for="cities">Cities</label>
+                        <input type="checkbox" name="theme" value="nature" id="nature"><label for="nature">Nature</label>
+                    </div>
+                </div>
+                <div class="selectbox">
+                    <button>Continents</button>
+                    <span class="hidden"></span>
+                    <div>
+                        <input type="checkbox" name="continents" value="africa" id="africa"><label
+                            for="africa">Africa</label>
+                        <input type="checkbox" name="continents" value="europe" id="europe"><label
+                            for="europe">Europe</label>
+                        <input type="checkbox" name="continents" value="asia" id="asia"><label for="asia">Asia</label>
+                        <input type="checkbox" name="continents" value="north-america" id="north-america"><label
+                            for="north-america">North America</label>
+                        <input type="checkbox" name="continents" value="south-america" id="south-america"><label
+                            for="south-america">South America</label>
+                        <input type="checkbox" name="continents" value="australia" id="australia"><label for="australia">Australia</label>
+                    </div>
+                </div>
+                <div class="selectbox">
                     <button>Sort</button>
                     <label>Latest
                         <select>
@@ -85,135 +113,95 @@
                             <option value="favorites">My favorites</option>
                         </select></label>
                 </div>
-                <div class="selectbox">
-                    <button>Theme's</button>
-                    <span class="hidden"></span>
-                    <div>
-                        <input type="checkbox" name="theme" value="people" id="people"><label
-                            for="people">People</label>
-                        <input type="checkbox" name="theme" value="food" id="food"><label for="food">Food</label>
-                        <input type="checkbox" name="theme" value="cities" id="cities"><label
-                            for="cities">Cities</label>
-                        <input type="checkbox" name="theme" value="food" id="nature"><label for="nature">Nature</label>
-                    </div>
-                </div>
-                <div class="selectbox">
-                    <button>Continents</button>
-                    <span class="hidden"></span>
-                    <div>
-                        <input type="checkbox" name="continents" value="people" id="africa"><label
-                            for="africa">Africa</label>
-                        <input type="checkbox" name="continents" value="food" id="europe"><label
-                            for="europe">Europe</label>
-                        <input type="checkbox" name="continents" value="cities" id="asia"><label for="asia">Asia</label>
-                        <input type="checkbox" name="continents" value="food" id="north-america"><label
-                            for="north-america">North America</label>
-                        <input type="checkbox" name="continents" value="food" id="south-america"><label
-                            for="south-america">South America</label>
-                        <input type="checkbox" name="continents" value="food" id="australia"><label for="australia">Australia</label>
-                    </div>
-                </div>
-                <div class="selectbox">
-                    <button>
-                        Date
-                    </button>
-                </div>
             </form>
         </aside>
         <div>
             <div class="column">
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="asia">
                     <figure>
                         <figcaption>Maledives</figcaption>
                         <p>20-03-2018</p>
                         <img src="dist/images/thumbnails/1_tn.jpg" data-src="dist/images/1.jpg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="food" data-continent="australia">
                     <figure>
-                        <figcaption>Copenhagen</figcaption>
-                        <p>20-12-2016</p>
-                        <img src="dist/images/thumbnails/2_tn.jpg" data-src="dist/images/2.jpg">
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/29_tn.jpg" data-src="dist/images/29.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#"  data-theme="people" data-continent="north-america">
                     <figure>
                         <figcaption>New York</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/3_tn.jpg" data-src="dist/images/3.jpg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="city" data-continent="north-america">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/20_tn.jpg" data-src="dist/images/20.png">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="europe">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/21_tn.jpg" data-src="dist/images/21.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="food" data-continent="asia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/22_tn.jpg" data-src="dist/images/22.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="people" data-continent="africa">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/23_tn.jpg" data-src="dist/images/23.png">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#"  data-theme="nature" data-continent="north-america">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/24_tn.jpg" data-src="dist/images/24.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#"  data-theme="animals" data-continent="europe">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/25_tn.jpg" data-src="dist/images/25.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="animals" data-continent="asia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/31_tn.jpg" data-src="dist/images/31.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="australia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/32_tn.jpg" data-src="dist/images/32.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="food" data-continent="europe">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/33_tn.jpg" data-src="dist/images/33.jpeg">
+                        <img src="dist/images/thumbnails/16_tn.jpg" data-src="dist/images/16.jpeg">
                     </figure>
                 </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/36_tn.jpg" data-src="dist/images/36.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="south-america">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
@@ -222,181 +210,189 @@
                 </a>
             </div>
             <div class="column">
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="south-america">
                     <figure>
-                        <figcaption>Venice</figcaption>
+                        <figcaption>Rio</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/5_tn.jpg" data-src="dist/images/5.jpg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="city" data-continent="australia">
                     <figure>
-                        <figcaption>Venice</figcaption>
+                        <figcaption>Australia</figcaption>
                         <p>27-07-2017</p>
                         <img src="dist/images/thumbnails/6_tn.jpg" data-src="dist/images/6.jpg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="north-america">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/35_tn.jpg" data-src="dist/images/35.jpeg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="city" data-continent="asia">
                     <figure>
                         <figcaption>Venice</figcaption>
                         <p>27-07-2017</p>
                         <img src="dist/images/thumbnails/7_tn.jpg" data-src="dist/images/7.jpg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="asia">
                     <figure>
                         <figcaption>Hongkong</figcaption>
                         <p>27-07-2017</p>
                         <img src="dist/images/thumbnails/8_tn.jpg" data-src="dist/images/8.jpg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="people" data-continent="north-america">
                     <figure>
-                        <figcaption>Japan</figcaption>
+                        <figcaption>New York</figcaption>
                         <p>27-07-2017</p>
                         <img src="dist/images/thumbnails/4_tn.jpg" data-src="dist/images/4.jpg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="people" data-continent="asia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/26_tn.jpg" data-src="dist/images/26.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="city" data-continent="europe">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/27_tn.jpg" data-src="dist/images/27.jpeg">
+                        <img src="dist/images/thumbnails/33_tn.jpg" data-src="dist/images/33.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="australia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/28_tn.jpg" data-src="dist/images/28.jpeg">
                     </figure>
                 </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/29_tn.jpg" data-src="dist/images/29.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/30_tn.jpg" data-src="dist/images/30.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/37_tn.jpg" data-src="dist/images/37.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
+                <a href="#" data-theme="nature" data-continent="asia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/38_tn.jpg" data-src="dist/images/38.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="city" data-continent="europe">
+                    <figure>
+                        <figcaption>Copenhagen</figcaption>
+                        <p>20-12-2016</p>
+                        <img src="dist/images/thumbnails/2_tn.jpg" data-src="dist/images/2.jpg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="people" data-continent="africa">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/39_tn.jpg" data-src="dist/images/39.jpeg">
                     </figure>
                 </a>
+                <a href="#" data-theme="food" data-continent="europe">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/30_tn.jpg" data-src="dist/images/30.jpeg">
+                    </figure>
+                </a>
+
             </div>
             <div class="column">
-                <a href="#">
+                <a href="#" data-theme="food" data-continent="north-america">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/9_tn.jpg" data-src="dist/images/9.jpg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="city" data-continent="africa">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/27_tn.jpg" data-src="dist/images/27.jpeg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="nature" data-continent="south-america">
                     <figure>
                         <figcaption>Schotland</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/10_tn.jpg" data-src="dist/images/10.jpg">
                     </figure>
                 </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/11_tn.jpg" data-src="dist/images/11.jpg">
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/12_tn.jpg" data-src="dist/images/12.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/13_tn.jpg" data-src="dist/images/13.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/14_tn.jpg" data-src="dist/images/14.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/15_tn.jpg" data-src="dist/images/15.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <figcaption>Home</figcaption>
-                        <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/16_tn.jpg" data-src="dist/images/16.jpeg">
-                    </figure>
-                </a>
-                <a href="#">
+                <a href="#" data-theme="food" data-continent="australia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/17_tn.jpg" data-src="dist/images/17.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="people" data-continent="africa">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/11_tn.jpg" data-src="dist/images/11.jpg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="nature" data-continent="europe">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/12_tn.jpg" data-src="dist/images/12.jpeg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="city" data-continent="europe">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/37_tn.jpg" data-src="dist/images/37.jpeg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="nature" data-continent="south-africa">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/13_tn.jpg" data-src="dist/images/13.jpeg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="nature" data-continent="asia">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/14_tn.jpg" data-src="dist/images/14.jpeg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="nature" data-continent="europe">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/15_tn.jpg" data-src="dist/images/15.jpeg">
+                    </figure>
+                </a>
+                <a href="#" data-theme="people" data-continent="africa">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/18_tn.jpg" data-src="dist/images/18.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#" data-theme="animals" data-continent="europe">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/19_tn.jpg" data-src="dist/images/19.jpeg">
                     </figure>
                 </a>
-                <a href="#">
+                <a href="#"  data-theme="people" data-continent="australia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
-                        <img src="dist/images/thumbnails/35_tn.jpg" data-src="dist/images/35.jpeg">
+                        <img src="dist/images/thumbnails/36_tn.jpg" data-src="dist/images/36.jpeg">
                     </figure>
                 </a>
             </div>
