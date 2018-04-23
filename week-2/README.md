@@ -21,9 +21,18 @@ App listens on `http://localhost:8080/`.
 
 
 ## Job stories
+### Marie
 - When I need to contact a company, I want to have multiple contact options on the website, so I can choice the right option for me
 - When I visit a website that is not written in my first language, I want to have summarized content with not to much jargon, so I can understand the content easily
 - When I watch video's online, I want to have (real) subtitles, so I can understand what they are saying.
+
+### Owner of a potential agency
+- When I am looking for a new employee, I want to have a quick overview from their work, so I can see what they have done.
+- When I am looking for a new employee, I want to be able to look at their code, so I can see what their level is.
+- When I am looking for a new employee, I want to know a little more about them, so I can see what kind of person they are and if they would fit in the company.
+
+## Card sorting
+![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/cardsorting.png)
 
 
 ## Best practice for deaf people by Marie van Driessche
@@ -42,4 +51,4 @@ App listens on `http://localhost:8080/`.
 
 
 ## Resources
-[presentation deaf people]: https://interaction18.ixda.org/program/talk-designing-for-deaf-people--for-everyone-actually-van-driessche-marie/
+* [presentation deaf people](https://interaction18.ixda.org/program/talk-designing-for-deaf-people--for-everyone-actually-van-driessche-marie/)
