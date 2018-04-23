@@ -1,6 +1,28 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'd-dindin-bold';
+  src: url('../fonts/d-din-bold-webfont.woff2') format('woff2'),
+  url('../fonts/d-din-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'd-dinregular';
+  src: url('../fonts/d-din-webfont.woff2') format('woff2'),
+  url('../fonts/d-din-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
 $base-color: #4A4A4A;
+$action-color: #FA2750;
 $background-color: #FFF;
 
-$base-font: 'Playfair Display', serif;
+$base-font: d-dindin-regular, sans-serif;
 $h1-font-size: 50px;
 $base-font-size: 20px;

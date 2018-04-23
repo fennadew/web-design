@@ -5,26 +5,406 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
-    <title>Portfolio Fenna de Wilde</title>
+    <title>Photo gallery</title>
 </head>
 <body>
 <header>
-    <a href="index.html"><img src="dist/images/logo.svg" alt="Logo of Fenna de Wilde"></a>
-    <nav>
-
-    </nav>
+    <a href="index.html" class="logo"><img src="dist/images/logo-pink.svg" alt="logo"></a>
+    <button data-text="About me">About me</button>
 </header>
 <main>
-    <section>
-        <div><img src="dist/images/onmobile.png"></div>
+    <section id="about-me">
+        <article>
+            <h1>About me</h1>
+            <p>My name is Fenna de Wilde. I am a 21 year old Communication & Multimedia student at the Hogeschool van
+                Amsterdam. I am currently in my third year, where I want to grow as a front-end developer.
+            <p>During my first year of education, I learned a lot about UX, interaction design, front-end development,
+                design research and much more.</p>
+            <p><q>&quot;For me to be in a creative environment while doing something technical is something that makes
+                me more than
+                happy.&quot;</q></p>
+            <a href="mailto:fennadewilde@hotmail.com">Email me</a>
+            <a href="tel:+31651753127">Call me</a>
+        </article>
+    </section>
+    <section class="showcase">
+        <h1>Latest work</h1>
+        <aside class="filter">
+            <form>
+                <div class="selectbox">
+                    <button>Sort</button>
+                    <label>Latest
+                        <select>
+                            <option value="latest">Latest</option>
+                            <option value="first">First</option>
+                            <option value="favorites">My favorites</option>
+                        </select></label>
+                </div>
+                <div class="selectbox">
+                    <button>Theme's</button>
+                    <span class="hidden"></span>
+                    <div>
+                        <input type="checkbox" name="theme" value="people" id="people"><label for="people">People</label>
+                        <input type="checkbox" name="theme" value="food" id="food"><label for="food">Food</label>
+                        <input type="checkbox" name="theme" value="cities" id="cities"><label for="cities">Cities</label>
+                        <input type="checkbox" name="theme" value="food" id="nature"><label for="nature">Nature</label>
+                    </div>
+                </div>
+                <div  class="selectbox">
+                    <button>Continents</button>
+                    <span class="hidden"></span>
+                    <div>
+                        <input type="checkbox" name="continents" value="people" id="africa"><label for="africa">Africa</label>
+                        <input type="checkbox" name="continents" value="food" id="europe"><label for="europe">Europe</label>
+                        <input type="checkbox" name="continents" value="cities" id="asia"><label for="asia">Asia</label>
+                        <input type="checkbox" name="continents" value="food" id="north-america"><label for="north-america">North America</label>
+                        <input type="checkbox" name="continents" value="food" id="south-america"><label for="south-america">South America</label>
+                        <input type="checkbox" name="continents" value="food" id="australia"><label for="australia">Australia</label>
+                    </div>
+                </div>
+                <div  class="selectbox">
+                    <button>
+                        Date
+                    </button>
+                </div>
+            </form>
+        </aside>
+        <aside>
+            <!--<button>Filter</button>-->
+            <form>
+                <div class="selectbox">
+                    <button>Sort</button>
+                    <label>Latest
+                        <select>
+                            <option value="latest">Latest</option>
+                            <option value="first">First</option>
+                            <option value="favorites">My favorites</option>
+                        </select></label>
+                </div>
+                <div class="selectbox">
+                    <button>Theme's</button>
+                    <span class="hidden"></span>
+                    <div>
+                        <input type="checkbox" name="theme" value="people" id="people"><label for="people">People</label>
+                        <input type="checkbox" name="theme" value="food" id="food"><label for="food">Food</label>
+                        <input type="checkbox" name="theme" value="cities" id="cities"><label for="cities">Cities</label>
+                        <input type="checkbox" name="theme" value="food" id="nature"><label for="nature">Nature</label>
+                    </div>
+                </div>
+                <div  class="selectbox">
+                    <button>Continents</button>
+                    <span class="hidden"></span>
+                    <div>
+                        <input type="checkbox" name="continents" value="people" id="africa"><label for="africa">Africa</label>
+                        <input type="checkbox" name="continents" value="food" id="europe"><label for="europe">Europe</label>
+                        <input type="checkbox" name="continents" value="cities" id="asia"><label for="asia">Asia</label>
+                        <input type="checkbox" name="continents" value="food" id="north-america"><label for="north-america">North America</label>
+                        <input type="checkbox" name="continents" value="food" id="south-america"><label for="south-america">South America</label>
+                        <input type="checkbox" name="continents" value="food" id="australia"><label for="australia">Australia</label>
+                    </div>
+                </div>
+                <div  class="selectbox">
+                    <button>
+                        Date
+                    </button>
+                </div>
+            </form>
+        </aside>
         <div>
-            <h1>Track ’n Trash</h1>
-            <p>Help students reduce their time on their mobiles </p>
-            <button>View case study</button>
+            <div class="column">
+                <a href="#">
+                    <figure>
+                        <figcaption>Maledives</figcaption>
+                        <p>20-03-2018</p>
+                        <img src="dist/images/thumbnails/1_tn.jpg" data-src="dist/images/1.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Copenhagen</figcaption>
+                        <p>20-12-2016</p>
+                        <img src="dist/images/thumbnails/2_tn.jpg" data-src="dist/images/2.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>New York</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/3_tn.jpg" data-src="dist/images/3.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/20_tn.jpg" data-src="dist/images/20.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/21_tn.jpg" data-src="dist/images/21.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/22_tn.jpg" data-src="dist/images/22.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/23_tn.jpg" data-src="dist/images/23.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/24_tn.jpg" data-src="dist/images/24.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/25_tn.jpg" data-src="dist/images/25.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/31_tn.jpg" data-src="dist/images/31.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/32_tn.jpg" data-src="dist/images/32.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/33_tn.jpg" data-src="dist/images/33.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/36_tn.jpg" data-src="dist/images/36.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/34_tn.jpg" data-src="dist/images/34.jpeg">
+                    </figure>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <figure>
+                        <figcaption>Venice</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/5_tn.jpg" data-src="dist/images/5.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Venice</figcaption>
+                        <p>27-07-2017</p>
+                        <img src="dist/images/thumbnails/6_tn.jpg" data-src="dist/images/6.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Venice</figcaption>
+                        <p>27-07-2017</p>
+                        <img src="dist/images/thumbnails/7_tn.jpg" data-src="dist/images/7.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Hongkong</figcaption>
+                        <p>27-07-2017</p>
+                        <img src="dist/images/thumbnails/8_tn.jpg" data-src="dist/images/8.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Japan</figcaption>
+                        <p>27-07-2017</p>
+                        <img src="dist/images/thumbnails/4_tn.jpg" data-src="dist/images/4.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/26_tn.jpg" data-src="dist/images/26.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/27_tn.jpg" data-src="dist/images/27.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/28_tn.jpg" data-src="dist/images/28.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/29_tn.jpg" data-src="dist/images/29.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/30_tn.jpg" data-src="dist/images/30.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/37_tn.jpg" data-src="dist/images/37.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/38_tn.jpg" data-src="dist/images/38.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/39_tn.jpg" data-src="dist/images/39.jpeg">
+                    </figure>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/9_tn.jpg" data-src="dist/images/9.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Schotland</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/10_tn.jpg" data-src="dist/images/10.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/11_tn.jpg" data-src="dist/images/11.jpg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/12_tn.jpg" data-src="dist/images/12.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/13_tn.jpg" data-src="dist/images/13.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/14_tn.jpg" data-src="dist/images/14.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/15_tn.jpg" data-src="dist/images/15.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/16_tn.jpg" data-src="dist/images/16.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/17_tn.jpg" data-src="dist/images/17.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/18_tn.jpg" data-src="dist/images/18.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/19_tn.jpg" data-src="dist/images/19.jpeg">
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <figcaption>Home</figcaption>
+                        <p>26-07-2017</p>
+                        <img src="dist/images/thumbnails/35_tn.jpg" data-src="dist/images/35.jpeg">
+                    </figure>
+                </a>
+            </div>
         </div>
     </section>
+    <section class="modal">
+        <button class="navigation left">Back</button>
+        <div class="modal-content">
+            <img src="dist/images/3.jpg">
+            <h2>New York</h2>
+            <p>26-07-2017</p>
+        </div>
+        <button class="navigation right">Next</button>
+        <button class="navigation close">Close</button>
+    </section>
 </main>
+<script src="dist/js/bundle.min.js"></script>
 </body>
 </html>

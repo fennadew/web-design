@@ -55,7 +55,7 @@ gulp.task('js', () => {
         .pipe(rename({extname: '.min.js'}))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(uglify())
+        .pipe(uglify({mangle: false}))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.jsDist))
         .pipe(connect.reload());
