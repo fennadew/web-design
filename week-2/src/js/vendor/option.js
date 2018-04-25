@@ -1,4 +1,6 @@
 // From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_custom_select
+import {sort} from "../modules/sort";
+
 export const option = {
     init() {
         var x, i, j, selElmnt, a, b, c;
@@ -23,6 +25,7 @@ export const option = {
                     /*when an item is clicked, update the original select box,
                     and the selected item:*/
                     var y, i, k, s, h;
+                    sort.sortImages('select');
                     s = this.parentNode.parentNode.getElementsByTagName("select")[0];
                     h = this.parentNode.previousSibling;
                     for (i = 0; i < s.length; i++) {
@@ -45,7 +48,6 @@ export const option = {
             a.addEventListener("click", function(e) {
                 /*when the select box is clicked, close any other select boxes,
                 and open/close the current select box:*/
-                console.log(x);
                x[0].classList.toggle('open');
                 e.stopPropagation();
                 closeAllSelect(this);
