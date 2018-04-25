@@ -171,50 +171,53 @@ header {
     text-align: center;
     font-family: d-dindin-bold, sans-serif;
   }
-  .selectbox {
-    &.center label {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    div {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  input[type="checkbox"] + label {
-    border: 2px solid #000;
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    padding: 10px 0;
-    margin: 0 5px;
-    opacity: 0.5;
-    border-radius: 50%;
-  }
-  input[type="checkbox"]:checked + label, input[type="radio"]:checked + label, input[type="checkbox"] + label:hover, input[type="radio"] + label:hover {
-    border: 2px solid $action-color;
-    opacity: 1;
-  }
-  input[type="radio"] + label {
-    border: 2px solid #000;
-    width: 170px;
-    height: 44px;
-    line-height: 42px;
-    text-align: center;
-    margin: 0 5px;
-    opacity: 0.5;
-  }
+}
 
-  span {
-    display: block;
-    width: 25px;
-    height: 29px;
-    top: 3px;
-    margin-bottom: 5px;
-    margin: auto;
-    color: $action-color;
+.selectbox {
+  &.center label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  div {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+input[type="checkbox"] + label {
+  border: 2px solid #000;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 5px;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+input[type="checkbox"]:checked + label, input[type="radio"]:checked + label, input[type="checkbox"] + label:hover, input[type="radio"] + label:hover {
+  border: 2px solid $action-color;
+  opacity: 1;
+}
+input[type="radio"] + label {
+  border: 2px solid #000;
+  width: 170px;
+  height: 44px;
+  line-height: 42px;
+  text-align: center;
+  margin: 0 5px;
+  opacity: 0.5;
+}
+
+
+label span {
+  display: block;
+  width: 25px;
+  height: 29px;
+  top: 3px;
+  margin-bottom: 5px;
+  margin: auto;
+  color: $action-color;
 }
 
 #about-me {
@@ -304,36 +307,26 @@ header {
 }
 
 .filter-small {
-  margin: 50px 70px 0;
+  margin: 10px 70px 20px;
   z-index: 5;
-  position: sticky;
   top: 20px;
+  position: relative;
   form {
     display: flex;
-    position: absolute;
     width: 100%;
-  }
-  > button {
-    background-color: #FFF;
-    border: 2px solid $action-color;
-    color: $action-color;
-    margin: auto;
-    width: 120px;
   }
   .selectbox {
     position: relative;
-    height: 35px;
     border: 2px solid #000;
     width: 100%;
     background: #FFF;
     cursor: pointer;
     overflow: hidden;
-    padding: 0 15px;
-    transition: height 200ms ease;
-
-    &.open {
-      height: 270px;
-      padding-bottom: 15px;
+    min-height: 150px;
+    padding: 10px 15px;
+    div {
+      padding-top: 10px;
+      flex-wrap: wrap;
     }
   }
   select.selectbox {
@@ -344,30 +337,25 @@ header {
     font-family: d-dindin-bold, sans-serif;
     padding: 5px;
     line-height: 1;
-    background: url("../images/arrow-down.svg") no-repeat;
-    background-position: 70% center;
   }
-  input[type="checkbox"] + label {
-    padding: 10px 25px;
-    &:before {
-      content: '';
-      width: 15px;
-      height: 15px;
-      border: 2px solid $action-color;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-    }
+  h2 {
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+    padding-right: 20px;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: d-dindin-bold, sans-serif;
     &:hover {
-      color: $action-color;
+      animation: bounce 1s infinite ease;
     }
   }
-  input[type="checkbox"]:checked + label:before {
-    background: $action-color;
+
+  form button:hover, form button:focus {
+    line-height: 32px;
   }
+
 }
 
 /*From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_custom_select*/
@@ -431,6 +419,7 @@ header {
     background-position: 50% 50%;
   }
 }
+
 /*style the arrow inside the select element:*/
 .select-selected:after {
   position: absolute;
@@ -507,24 +496,7 @@ select {
   white-space: nowrap;
 }
 
-form button {
-  height: 32px;
-  line-height: 32px;
-  width: 100%;
-  padding-right: 20px;
-  background: transparent url("../images/arrow-down.svg") no-repeat;
-  background-position: 70% center;
-  color: #000;
-  &:hover {
-    animation: bounce 1s infinite ease;
-  }
-}
-
-form button:hover, form button:focus {
-  line-height: 32px;
-}
-
-.filter-small span {
+.count {
   position: absolute;
   right: 5px;
   display: block;

@@ -82,39 +82,45 @@
             <!--<button>Filter</button>-->
             <form>
                 <div class="selectbox">
-                    <button>Theme's</button>
-                    <span class="hidden"></span>
+                    <span class="count hidden"></span>
+                    <h2>Places</h2>
                     <div>
                         <input type="checkbox" name="theme" value="people" id="people"><label
-                            for="people">People</label>
-                        <input type="checkbox" name="theme" value="food" id="food"><label for="food">Food</label>
+                            for="people"><span><img src="dist/images/people.svg"></span>People</label>
+                        <input type="checkbox" name="theme" value="food" id="food"><label
+                            for="food"><span><img
+                            src="dist/images/fruit.svg"></span>Food</label>
                         <input type="checkbox" name="theme" value="city" id="cities"><label
-                            for="cities">Cities</label>
+                            for="cities"><span><img src="dist/images/cityscape.svg"></span>Cities</label>
                         <input type="checkbox" name="theme" value="nature" id="nature"><label
-                            for="nature">Nature</label>
+                            for="nature"><span><img src="dist/images/park.svg"></span>Nature</label>
                     </div>
                 </div>
-                <div class="selectbox">
-                    <button>Continents</button>
-                    <span class="hidden"></span>
+                <div class="selectbox center">
+                    <span class="count hidden"></span>
+                    <h2>Which places</h2>
                     <div>
                         <input type="checkbox" name="continents" value="europe" id="europe"><label
                             for="europe">Europe</label>
                         <input type="checkbox" name="continents" value="asia" id="asia"><label
                             for="asia">Asia</label>
-                        <input type="checkbox" name="continents" value="north-america" id="north-america"><label
-                            for="north-america">North America</label>
-                        <input type="checkbox" name="continents" value="south-america" id="south-america"><label
-                            for="south-america">South America</label>
+                        <input type="checkbox" name="continents" value="north-america"
+                               id="north-america"><label
+                            for="north-america">North-America</label>
+                        <input type="checkbox" name="continents" value="south-america"
+                               id="south-america"><label
+                            for="south-america">South-America</label>
                         <input type="checkbox" name="continents" value="australia" id="australia"><label
                             for="australia">Australia</label>
                     </div>
                 </div>
                 <div class="selectbox custom-select">
-                <select>
-                    <option value="latest">Latest</option>
-                    <option value="oldest">Oldest</option>
-                </select>
+                    <h2>Sort by</h2>
+                    <div><input type="radio" name="sort" value="latest" id="latest"><label
+                            for="latest">Latest</label>
+                        <input type="radio" name="sort" value="oldest" id="oldest"><label
+                                for="oldest">Oldest</label>
+                    </div>
                 </div>
             </form>
         </aside>

@@ -2,13 +2,11 @@ import LazyLoad from './vendor/lazyload';
 import {routes} from './modules/routes';
 import {domElements} from "./modules/domElements";
 import {events} from "./modules/events";
-import {option} from "./vendor/option";
 import {sort} from "./modules/sort";
 
 const app = {
     init() {
         routes.init();
-        option.init();
         const initLazyLoad = new LazyLoad({
             elements_selector: '.showcase figure img',
             class_loading: 'll-loading',

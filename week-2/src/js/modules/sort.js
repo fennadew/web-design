@@ -2,32 +2,21 @@ import {domElements} from "./domElements";
 
 export const sort = {
     type: "latest",
-    sortImages(input) {
+    sortImages() {
         const ul = document.querySelectorAll('.column');
+        const lengthHalf = (domElements.radioButtons.length / 2);
 
-        if(input === 'radio') {
-            for (let i = 0; i < domElements.radioButtons.length; i++) {
-                if (domElements.radioButtons[i].checked) {
-                    this.type = domElements.radioButtons[i].value
-                }
+        for (let i = 0; i < domElements.radioButtons.length; i++) {
+            if (domElements.radioButtons[i].checked) {
+                this.type = domElements.radioButtons[i].value
             }
-
-            const x = document.getElementsByClassName("custom-select");
-            const selElmnt = x[0].getElementsByTagName("select")[0];
-
-            for (let i = 0; i < selElmnt.options.length; i++) {
-                if (this.type === selElmnt.options[i].innerHTML.toLowerCase()) {
-                    selElmnt.selectedIndex = i;
-                }
-            }
-            const a = document.querySelector('.select-selected')
-            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-        } else {
-            const x = document.getElementsByClassName("custom-select");
-            const selElmnt = x[0].getElementsByTagName("select")[0];
-            console.log(selElmnt.options[selElmnt.selectedIndex].innerHTML.toLowerCase())
-            this.type = selElmnt.options[selElmnt.selectedIndex].innerHTML.toLowerCase()
         }
+        for (let i = 0; i < domElements.radioButtons.length; i++) {
+            if (domElements.radioButtons[i].value === this.type) {
+                domElements.radioButtons[i].checked = true;
+            }
+        }
+        console.log("sort")
 
         if (this.type === "latest") {
             // With help from https://stackoverflow.com/questions/8837191/sort-an-html-list-with-javascript
