@@ -25,7 +25,6 @@ export const option = {
                     /*when an item is clicked, update the original select box,
                     and the selected item:*/
                     var y, i, k, s, h;
-                    sort.sortImages('select');
                     s = this.parentNode.parentNode.getElementsByTagName("select")[0];
                     h = this.parentNode.previousSibling;
                     for (i = 0; i < s.length; i++) {
@@ -40,6 +39,7 @@ export const option = {
                             break;
                         }
                     }
+                    sort.sortImages('select');
                     h.click();
                 });
                 b.appendChild(c);

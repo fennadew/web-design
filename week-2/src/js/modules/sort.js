@@ -3,9 +3,7 @@ import {domElements} from "./domElements";
 export const sort = {
     type: "latest",
     sortImages(input) {
-        console.log("yes")
         const ul = document.querySelectorAll('.column');
-
 
         if(input === 'radio') {
             for (let i = 0; i < domElements.radioButtons.length; i++) {
@@ -27,6 +25,7 @@ export const sort = {
         } else {
             const x = document.getElementsByClassName("custom-select");
             const selElmnt = x[0].getElementsByTagName("select")[0];
+            console.log(selElmnt.options[selElmnt.selectedIndex].innerHTML.toLowerCase())
             this.type = selElmnt.options[selElmnt.selectedIndex].innerHTML.toLowerCase()
         }
 
