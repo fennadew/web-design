@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="512px" height="512px">
-  <g>
-    <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z" fill="#fafafa"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="63px" height="117px" viewBox="0 0 63 117" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>back</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="back" fill="#FA2750" fill-rule="nonzero">
+            <path d="M55.6,115.3 C56.4,116.1 57.4,116.5 58.5,116.5 C59.6,116.5 60.6,116.1 61.4,115.3 C63,113.7 63,111.1 61.4,109.5 L10.4,58.5 L61.4,7.5 C63,5.9 63,3.3 61.4,1.7 C59.8,0.1 57.2,0.1 55.6,1.7 L1.6,55.6 C5.38458167e-15,57.2 5.38458167e-15,59.8 1.6,61.4 L55.6,115.3 Z" id="Shape"></path>
+        </g>
+    </g>
 </svg>

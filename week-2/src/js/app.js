@@ -19,6 +19,10 @@ const app = {
             }, 1000)
         }
 
+        domElements.modalImg.addEventListener('click', () => {
+            domElements.modalImg.classList.toggle('full-width');
+        });
+
         domElements.menuButton.addEventListener('click', (e) => {
             events.toggleMenu(e);
         });
@@ -112,9 +116,6 @@ const app = {
                     domElements.selectbox[i].classList.remove('open');
                 }
             }
-        });
-        domElements.modalCLose.addEventListener('click', (e) => {
-            domElements.modal.classList.remove('open');
         });
         domElements.back.addEventListener('click', (e) => {
             if (events.currentImg > 0) {
