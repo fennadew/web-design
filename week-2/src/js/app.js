@@ -13,12 +13,14 @@ const app = {
             class_loaded: 'll-loaded',
             class_error: 'll-error',
         });
-        if (!window.location.hash) {
-            setTimeout(() => {
-                domElements.filter.classList.add('open');
-                domElements.body.classList.add('fixed');
-            }, 1000)
-        }
+        // if (!window.location.hash) {
+        //     setTimeout(() => {
+        //         domElements.filter.classList.add('open');
+        //         domElements.body.classList.add('fixed');
+        //     }, 1000)
+        // }
+
+        domElements.radioButtons[0].checked = true
 
         domElements.modalImg.addEventListener('click', () => {
             domElements.modalImg.classList.toggle('full-width');
@@ -32,21 +34,19 @@ const app = {
         }
         for (let i = 0; i < domElements.radioButtons.length; i++) {
             domElements.radioButtons[i].addEventListener('click', (e) => {
-                filter.hideFilterBox();
+                // filter.hideFilterBox();
                 sort.sortImages("radio");
             });
         }
 
         let continentHalf = domElements.checkboxesContinent.length / 2;
 
-        for (let i = 0; i < continentHalf; i++) {
+        for (let i = 0; i < domElements.checkboxesContinent.length; i++) {
             domElements.checkboxesContinent[i].addEventListener('click', ((i) => {
                 return function () {
                     if (domElements.checkboxesContinent[i].checked) {
-                        domElements.checkboxesContinent[continentHalf + i].checked = true;
                         filter.continentCount += 1
                     } else {
-                        domElements.checkboxesContinent[continentHalf + i].checked = false;
                         filter.continentCount -= 1
                     }
                     filter.showSelection('continent');
@@ -54,52 +54,50 @@ const app = {
             })(i));
         }
 
-        for (let i = continentHalf; i < domElements.checkboxesContinent.length; i++) {
-            domElements.checkboxesContinent[i].addEventListener('click', ((i) => {
-                return function () {
-                    if (domElements.checkboxesContinent[i].checked) {
-                        domElements.checkboxesContinent[i - continentHalf].checked = true;
-                        filter.continentCount += 1
-                    } else {
-                        domElements.checkboxesContinent[i - continentHalf].checked = false;
-                        filter.continentCount -= 1
-                    }
-                    filter.showSelection('continent');
-                }
-            })(i));
-        }
+        // for (let i = continentHalf; i < domElements.checkboxesContinent.length; i++) {
+        //     domElements.checkboxesContinent[i].addEventListener('click', ((i) => {
+        //         return function () {
+        //             if (domElements.checkboxesContinent[i].checked) {
+        //                 domElements.checkboxesContinent[i - continentHalf].checked = true;
+        //                 filter.continentCount += 1
+        //             } else {
+        //                 domElements.checkboxesContinent[i - continentHalf].checked = false;
+        //                 filter.continentCount -= 1
+        //             }
+        //             filter.showSelection('continent');
+        //         }
+        //     })(i));
+        // }
 
         let themeHalf = domElements.checkboxesTheme.length / 2;
 
-        for (let i = 0; i < themeHalf; i++) {
+        for (let i = 0; i < domElements.checkboxesTheme.length; i++) {
             domElements.checkboxesTheme[i].addEventListener('click', ((i) => {
                 return function () {
                     if (domElements.checkboxesTheme[i].checked) {
-                        domElements.checkboxesTheme[themeHalf + i].checked = true;
                         filter.themeCount += 1
                     } else {
-                        domElements.checkboxesTheme[themeHalf + i].checked = false;
                         filter.themeCount -= 1
                     }
                     filter.showSelection('theme');
                 }
             })(i));
         }
-
-        for (let i = themeHalf; i < domElements.checkboxesTheme.length; i++) {
-            domElements.checkboxesTheme[i].addEventListener('click', ((i) => {
-                return function () {
-                    if (domElements.checkboxesTheme[i].checked) {
-                        domElements.checkboxesTheme[i - themeHalf].checked = true;
-                        filter.themeCount += 1
-                    } else {
-                        domElements.checkboxesTheme[i - themeHalf].checked = false;
-                        filter.themeCount -= 1
-                    }
-                    filter.showSelection('theme');
-                }
-            })(i));
-        }
+        //
+        // for (let i = themeHalf; i < domElements.checkboxesTheme.length; i++) {
+        //     domElements.checkboxesTheme[i].addEventListener('click', ((i) => {
+        //         return function () {
+        //             if (domElements.checkboxesTheme[i].checked) {
+        //                 domElements.checkboxesTheme[i - themeHalf].checked = true;
+        //                 filter.themeCount += 1
+        //             } else {
+        //                 domElements.checkboxesTheme[i - themeHalf].checked = false;
+        //                 filter.themeCount -= 1
+        //             }
+        //             filter.showSelection('theme');
+        //         }
+        //     })(i));
+        // }
 
         for (let i = 0; i < domElements.selectboxButton.length; i++) {
             domElements.selectboxButton[i].addEventListener('click', ((i) => {
@@ -210,10 +208,10 @@ const filter = {
             }
         }
 
-        if (this.themeCount > 0 && this.continentCount > 0 && this.checkcount > 0) {
-            domElements.filter.classList.remove('open');
-            domElements.body.classList.remove('fixed');
-        }
+        // if (this.themeCount > 0 && this.continentCount > 0 && this.checkcount > 0) {
+        //     domElements.filter.classList.remove('open');
+        //     domElements.body.classList.remove('fixed');
+        // }
     }
 };
 

@@ -15,6 +15,6 @@ export const domElements = {
     checkboxesContinent: document.getElementsByName("continents"),
     allCheckboxes: document.querySelectorAll('.selectbox input[type="checkbox"'),
     counts: document.querySelectorAll(".filter-small .count"),
-    filter: document.querySelector('.filter'),
+    // filter: document.querySelector('.filter'),
     radioButtons: document.querySelectorAll('input[type="radio"')
 }
