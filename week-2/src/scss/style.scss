@@ -192,7 +192,7 @@ header {
     opacity: 0.5;
     border-radius: 50%;
   }
-  input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+  input[type="checkbox"]:checked + label, input[type="radio"]:checked + label, input[type="checkbox"] + label:hover, input[type="radio"] + label:hover {
     border: 2px solid $action-color;
     opacity: 1;
   }
@@ -332,6 +332,17 @@ header {
       padding-bottom: 15px;
     }
   }
+  select.selectbox {
+    color: black;
+    text-align: center;
+    text-align-last: center;
+    text-transform: uppercase;
+    font-family: d-dindin-bold, sans-serif;
+    padding: 5px;
+    line-height: 1;
+    background: url("../images/arrow-down.svg") no-repeat;
+    background-position: 70% center;
+  }
   input[type="checkbox"] + label {
     padding: 10px 25px;
     &:before {
@@ -346,10 +357,71 @@ header {
       bottom: 0;
       margin: auto;
     }
+    &:hover {
+      color: $action-color;
+    }
   }
   input[type="checkbox"]:checked + label:before {
     background: $action-color;
   }
+}
+
+/*From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_custom_select*/
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  color: black;
+  text-align: center;
+  text-align-last: center;
+  text-transform: uppercase;
+  font-family: d-dindin-bold, sans-serif;
+  line-height: 32px;
+  background: url("../images/arrow-down.svg") no-repeat;
+  background-position: 70% center;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div {
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  border-color:  $action-color transparent $action-color transparent;
+  transition: all 200ms ease;
+  cursor: pointer;
+  user-select: none;
+  &:last-of-type {
+    border-color:  transparent transparent $action-color transparent;
+  }
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  padding-top: 9px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: $action-color;
+  color: #FFF;
 }
 
 input[type="checkbox"], input[type="radio"] {

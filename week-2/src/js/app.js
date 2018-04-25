@@ -2,10 +2,12 @@ import LazyLoad from './vendor/lazyload';
 import {routes} from './modules/routes';
 import {domElements} from "./modules/domElements";
 import {events} from "./modules/events";
+import {option} from "./vendor/option";
 
 const app = {
     init() {
         routes.init();
+        option.init();
         const initLazyLoad = new LazyLoad({
             elements_selector: '.showcase figure img',
             class_loading: 'll-loading',
@@ -108,10 +110,8 @@ const app = {
             })(i));
         }
         document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('modal')) {
-                domElements.modal.classList.remove('open');
-            }
-            if (!e.target.classList.contains('selectbox') && e.target.tagName !== 'LABEL' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'BUTTON') {
+            console.log( e.target.tagName);
+            if (!e.target.classList.contains('selectbox') && e.target.tagName !== 'LABEL' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'SELECT' && e.target.tagName !== 'BUTTON') {
                 for (let i = 0; i < domElements.selectbox.length; i++) {
                     domElements.selectbox[i].classList.remove('open');
                 }
