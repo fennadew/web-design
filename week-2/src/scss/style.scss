@@ -327,6 +327,7 @@ header {
     overflow: hidden;
     padding: 0 15px;
     transition: height 200ms ease;
+
     &.open {
       height: 270px;
       padding-bottom: 15px;
@@ -371,6 +372,7 @@ header {
 .custom-select select {
   display: none; /*hide original SELECT element:*/
 }
+
 .select-selected {
   color: black;
   text-align: center;
@@ -380,6 +382,51 @@ header {
   line-height: 32px;
   background: url("../images/arrow-down.svg") no-repeat;
   background-position: 70% center;
+  &:hover {
+    animation: bounce 1s infinite ease;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    background-position: 70% 50%;
+  }
+  20% {
+    background-position: 70% 40%;
+  }
+  50% {
+    background-position: 70% 60%;
+  }
+  80% {
+    background-position: 70% 40%;
+  }
+  100% {
+    background-position: 70% 50%;
+  }
+}
+
+@keyframes bounceleft {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 30% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+@keyframes bounceright {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 70% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
 }
 /*style the arrow inside the select element:*/
 .select-selected:after {
@@ -390,23 +437,26 @@ header {
   width: 0;
   height: 0;
 }
+
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #fff transparent;
   top: 7px;
 }
+
 /*style the items (options), including the selected item:*/
 .select-items div {
   padding: 12px 16px;
   border: 1px solid transparent;
-  border-color:  $action-color transparent $action-color transparent;
+  border-color: $action-color transparent $action-color transparent;
   transition: all 200ms ease;
   cursor: pointer;
   user-select: none;
   &:last-of-type {
-    border-color:  transparent transparent $action-color transparent;
+    border-color: transparent transparent $action-color transparent;
   }
 }
+
 /*style items (options):*/
 .select-items {
   position: absolute;
@@ -415,10 +465,12 @@ header {
   right: 0;
   z-index: 99;
 }
+
 /*hide the items when the select box is closed:*/
 .select-hide {
   display: none;
 }
+
 .select-items div:hover, .same-as-selected {
   background-color: $action-color;
   color: #FFF;
@@ -460,6 +512,9 @@ form button {
   background: transparent url("../images/arrow-down.svg") no-repeat;
   background-position: 70% center;
   color: #000;
+  &:hover {
+    animation: bounce 1s infinite ease;
+  }
 }
 
 form button:hover, form button:focus {
@@ -679,11 +734,18 @@ a {
 .navigation.left {
   right: 80px;
   background-image: url("../images/back.svg");
+  &:hover {
+    animation: bounceleft 800ms infinite ease;
+  }
 }
 
 .navigation.right {
   right: 0;
   background-image: url("../images/next.svg");
+  &:hover {
+    animation: bounceright 800ms infinite ease;
+
+  }
 }
 
 .navigation.close {
@@ -779,6 +841,7 @@ a {
     margin-left: 50%;
     font-family: 'Montserrat', sans-serif;
     padding: 0 70px;
+
     img {
       position: absolute;
       width: 30px;

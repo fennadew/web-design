@@ -14,7 +14,7 @@ const app = {
             class_loaded: 'll-loaded',
             class_error: 'll-error',
         });
-        if(!window.location.hash) {
+        if (!window.location.hash) {
             setTimeout(() => {
                 domElements.filter.classList.add('open');
                 domElements.body.classList.add('fixed');
@@ -29,11 +29,12 @@ const app = {
             events.toggleMenu(e);
         });
         for (let i = 0; i < domElements.images.length; i++) {
-            domElements.images[i].setAttribute('href', '#photos/'+ i);
+            domElements.images[i].setAttribute('href', '#photos/' + i);
         }
         for (let i = 0; i < domElements.radioButtons.length; i++) {
             domElements.radioButtons[i].addEventListener('click', (e) => {
                 filter.hideFilterBox();
+                sort.sortImages();
             });
         }
 
@@ -110,7 +111,7 @@ const app = {
             })(i));
         }
         document.addEventListener('click', (e) => {
-            console.log( e.target.tagName);
+            console.log(e.target.tagName);
             if (!e.target.classList.contains('selectbox') && e.target.tagName !== 'LABEL' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'SELECT' && e.target.tagName !== 'BUTTON') {
                 for (let i = 0; i < domElements.selectbox.length; i++) {
                     domElements.selectbox[i].classList.remove('open');
@@ -204,9 +205,9 @@ const filter = {
         }
         this.hideFilterBox();
     },
-    hideFilterBox(){
-        for(let i = 0; i < domElements.radioButtons.length; i++) {
-            if(domElements.radioButtons[i].checked) {
+    hideFilterBox() {
+        for (let i = 0; i < domElements.radioButtons.length; i++) {
+            if (domElements.radioButtons[i].checked) {
                 this.checkcount = 1;
             }
         }
@@ -217,5 +218,77 @@ const filter = {
         }
     }
 };
+
+const sort = {
+    type: "latest",
+    sortImages() {
+        const ul = document.querySelectorAll('.column');
+
+        for (let i = 0; i < domElements.radioButtons.length; i++) {
+            if (domElements.radioButtons[i].checked) {
+                this.type = domElements.radioButtons[i].value
+            }
+        }
+
+        if (this.type === "latest") {
+            // With help from https://stackoverflow.com/questions/8837191/sort-an-html-list-with-javascript
+
+            for (let a = 0; a < ul.length; a++) {
+                const new_ul = ul[a].cloneNode(false);
+
+                const lis = [];
+                for (let i = ul[a].childNodes.length; i--;) {
+
+                    if (ul[a].childNodes[i].nodeName === 'A') {
+                        lis.push(ul[a].childNodes[i]);
+                    }
+                }
+
+                lis.sort(function (a, b) {
+                    let aDate = "" + a.childNodes[0].nextElementSibling.children[1].innerHTML;
+                    let aSplitDate = aDate.split("-");
+                    let aNewDate = aSplitDate[1]+"/"+aSplitDate[0]+"/"+aSplitDate[2];
+                    let bDate = b.childNodes[0].nextElementSibling.children[1].innerHTML;
+                    let bSplitDate = bDate.split("-");
+                    let bNewDate = bSplitDate[1]+"/"+bSplitDate[0]+"/"+bSplitDate[2];
+                    return new Date(bNewDate) - new Date(aNewDate);
+                });
+
+                for (let i = 0; i < lis.length; i++)
+                    new_ul.appendChild(lis[i]);
+                ul[a].parentNode.replaceChild(new_ul, ul[a]);
+            }
+        } else {
+            // With help from https://stackoverflow.com/questions/8837191/sort-an-html-list-with-javascript
+
+            for (let a = 0; a < ul.length; a++) {
+                const new_ul = ul[a].cloneNode(false);
+
+                const lis = [];
+                for (let i = ul[a].childNodes.length; i--;) {
+
+                    if (ul[a].childNodes[i].nodeName === 'A') {
+                        lis.push(ul[a].childNodes[i]);
+                    }
+                }
+
+                lis.sort(function (a, b) {
+                    let aDate = "" + a.childNodes[0].nextElementSibling.children[1].innerHTML;
+                    let aSplitDate = aDate.split("-");
+                    let aNewDate = aSplitDate[1]+"/"+aSplitDate[0]+"/"+aSplitDate[2];
+                    let bDate = b.childNodes[0].nextElementSibling.children[1].innerHTML;
+                    let bSplitDate = bDate.split("-");
+                    let bNewDate = bSplitDate[1]+"/"+bSplitDate[0]+"/"+bSplitDate[2];
+                    return new Date(aNewDate) - new Date(bNewDate);
+                });
+
+
+                for (let i = 0; i < lis.length; i++)
+                    new_ul.appendChild(lis[i]);
+                ul[a].parentNode.replaceChild(new_ul, ul[a]);
+            }
+        }
+    }
+}
 
 app.init();
