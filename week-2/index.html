@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.min.css">
     <title>Photo gallery</title>
 </head>
@@ -19,16 +19,18 @@
         <article>
             <h1>About me</h1>
             <img src="dist/images/fenna.png" alt="Photo of me">
-            <p>My name is Fenna de Wilde. I am a 21 year old Communication & Multimedia student at the Hogeschool van
+            <p>My name is Fenna de Wilde. I am a 21 year old Communication & Multimedia student at the Hogeschool
+                van
                 Amsterdam. I am currently in my third year, where I want to grow as a front-end developer.</p>
             <a href="mailto:fennadewilde@hotmail.com" data-text="Email me">Email me</a>
             <a href="tel:+31651753127" data-text="Call me">Call me</a>
-            <p><q>&quot;For me to be in a creative environment while doing something technical is something that makes
+            <p><q>&quot;For me to be in a creative environment while doing something technical is something that
+                makes
                 me more than
                 happy.&quot;</q></p>
         </article>
     </section>
-    <section class="showcase">
+    <section id="home" class="showcase route">
         <h1>Latest work</h1>
         <section class="filter">
             <div>
@@ -39,7 +41,8 @@
                         <div>
                             <input type="checkbox" name="theme" value="people" id="people1"><label
                                 for="people1"><span><img src="dist/images/people.svg"></span>People</label>
-                            <input type="checkbox" name="theme" value="food" id="food1"><label for="food1"><span><img
+                            <input type="checkbox" name="theme" value="food" id="food1"><label
+                                for="food1"><span><img
                                 src="dist/images/fruit.svg"></span>Food</label>
                             <input type="checkbox" name="theme" value="city" id="cities1"><label
                                 for="cities1"><span><img src="dist/images/cityscape.svg"></span>Cities</label>
@@ -50,13 +53,17 @@
                     <div class="selectbox center">
                         <h2>Which places</h2>
                         <div>
-                            <input type="checkbox" name="continents" value="africa" id="africa1"><label for="africa1">Africa</label>
-                            <input type="checkbox" name="continents" value="europe" id="europe1"><label for="europe1">Europe</label>
+                            <input type="checkbox" name="continents" value="africa" id="africa1"><label
+                                for="africa1">Africa</label>
+                            <input type="checkbox" name="continents" value="europe" id="europe1"><label
+                                for="europe1">Europe</label>
                             <input type="checkbox" name="continents" value="asia" id="asia1"><label
                                 for="asia1">Asia</label>
-                            <input type="checkbox" name="continents" value="north-america" id="north-america1"><label
+                            <input type="checkbox" name="continents" value="north-america"
+                                   id="north-america1"><label
                                 for="north-america1">North-America</label>
-                            <input type="checkbox" name="continents" value="south-america" id="south-america1"><label
+                            <input type="checkbox" name="continents" value="south-america"
+                                   id="south-america1"><label
                                 for="south-america1">South-America</label>
                             <input type="checkbox" name="continents" value="australia" id="australia1"><label
                                 for="australia1">Australia</label>
@@ -85,7 +92,8 @@
                         <input type="checkbox" name="theme" value="food" id="food"><label for="food">Food</label>
                         <input type="checkbox" name="theme" value="city" id="cities"><label
                             for="cities">Cities</label>
-                        <input type="checkbox" name="theme" value="nature" id="nature"><label for="nature">Nature</label>
+                        <input type="checkbox" name="theme" value="nature" id="nature"><label
+                            for="nature">Nature</label>
                     </div>
                 </div>
                 <div class="selectbox">
@@ -96,12 +104,14 @@
                             for="africa">Africa</label>
                         <input type="checkbox" name="continents" value="europe" id="europe"><label
                             for="europe">Europe</label>
-                        <input type="checkbox" name="continents" value="asia" id="asia"><label for="asia">Asia</label>
+                        <input type="checkbox" name="continents" value="asia" id="asia"><label
+                            for="asia">Asia</label>
                         <input type="checkbox" name="continents" value="north-america" id="north-america"><label
                             for="north-america">North America</label>
                         <input type="checkbox" name="continents" value="south-america" id="south-america"><label
                             for="south-america">South America</label>
-                        <input type="checkbox" name="continents" value="australia" id="australia"><label for="australia">Australia</label>
+                        <input type="checkbox" name="continents" value="australia" id="australia"><label
+                            for="australia">Australia</label>
                     </div>
                 </div>
                 <div class="selectbox">
@@ -131,7 +141,7 @@
                         <img src="dist/images/thumbnails/29_tn.jpg" data-src="dist/images/29.jpeg">
                     </figure>
                 </a>
-                <a href="#"  data-theme="people" data-continent="north-america">
+                <a href="#" data-theme="people" data-continent="north-america">
                     <figure>
                         <figcaption>New York</figcaption>
                         <p>26-07-2017</p>
@@ -166,14 +176,14 @@
                         <img src="dist/images/thumbnails/23_tn.jpg" data-src="dist/images/23.png">
                     </figure>
                 </a>
-                <a href="#"  data-theme="nature" data-continent="north-america">
+                <a href="#" data-theme="nature" data-continent="north-america">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
                         <img src="dist/images/thumbnails/24_tn.jpg" data-src="dist/images/24.jpeg">
                     </figure>
                 </a>
-                <a href="#"  data-theme="animals" data-continent="europe">
+                <a href="#" data-theme="animals" data-continent="europe">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
@@ -388,7 +398,7 @@
                         <img src="dist/images/thumbnails/19_tn.jpg" data-src="dist/images/19.jpeg">
                     </figure>
                 </a>
-                <a href="#"  data-theme="people" data-continent="australia">
+                <a href="#" data-theme="people" data-continent="australia">
                     <figure>
                         <figcaption>Home</figcaption>
                         <p>26-07-2017</p>
@@ -398,15 +408,19 @@
             </div>
         </div>
     </section>
-    <section class="modal">
-        <button class="navigation left">Back</button>
-        <div class="modal-content">
+    <section id="details" class="route">
+        <a href="#" class="navigation left">Back</a>
+        <div class="detail-content">
             <img src="dist/images/3.jpg">
-            <h2>New York</h2>
-            <p>26-07-2017</p>
+            <article>
+                <h1>New York</h1>
+                <time datetime=>26-07-2017</time>
+                <img src="dist/images/photo-camera.svg" alt="photo camera"><h2>Photographed with a Nikon D5100</h2>
+                <p>Shot during my vacation on the Maledives. Took a 2 hour helicopter flight the beautiful beaches from above. Been traveling there for almost 3 months. The water was so blue and the beaches so white. The atmosphere was really nice. Would definitely go back there.</p>
+            </article>
         </div>
-        <button class="navigation right">Next</button>
-        <button class="navigation close">Close</button>
+        <a href="#" class="navigation right">Next</a>
+        <a href="/" class="navigation close">Close</a>
     </section>
 </main>
 <script src="dist/js/bundle.min.js"></script>

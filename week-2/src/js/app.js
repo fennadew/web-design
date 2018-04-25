@@ -1,28 +1,29 @@
 import LazyLoad from './vendor/lazyload';
+import {routes} from './modules/routes';
+import {domElements} from "./modules/domElements";
+import {events} from "./modules/events";
 
 const app = {
     init() {
+        routes.init();
         const initLazyLoad = new LazyLoad({
             elements_selector: '.showcase figure img',
             class_loading: 'll-loading',
             class_loaded: 'll-loaded',
             class_error: 'll-error',
         });
-        setTimeout(() => {
-            domElements.filter.classList.add('open');
-            domElements.body.classList.add('fixed');
-        }, 1000)
+        if(!window.location.hash) {
+            setTimeout(() => {
+                domElements.filter.classList.add('open');
+                domElements.body.classList.add('fixed');
+            }, 1000)
+        }
+
         domElements.menuButton.addEventListener('click', (e) => {
             events.toggleMenu(e);
         });
         for (let i = 0; i < domElements.images.length; i++) {
-            domElements.images[i].addEventListener('click', ((i) => {
-                return function () {
-                    events.currentImg = i;
-                    events.showModal();
-                    events.showContent();
-                }
-            })(i));
+            domElements.images[i].setAttribute('href', '#photos/'+ i);
         }
         for (let i = 0; i < domElements.radioButtons.length; i++) {
             domElements.radioButtons[i].addEventListener('click', (e) => {
@@ -130,28 +131,6 @@ const app = {
     }
 };
 
-const domElements = {
-    about: document.querySelector('#about-me'),
-    body: document.querySelector('body'),
-    menuButton: document.querySelector('header button'),
-    images: document.querySelectorAll('.showcase a'),
-    modal: document.querySelector('.modal'),
-    modalImg: document.querySelector('.modal img'),
-    modalHeading: document.querySelector('.modal h2'),
-    modalText: document.querySelector('.modal p'),
-    back: document.querySelector('.navigation.left'),
-    next: document.querySelector('.navigation.right'),
-    modalCLose: document.querySelector('.navigation.close'),
-    selectboxButton: document.querySelectorAll('.selectbox button'),
-    selectbox: document.querySelectorAll('.filter-small .selectbox'),
-    checkboxesTheme: document.getElementsByName("theme"),
-    checkboxesContinent: document.getElementsByName("continents"),
-    allCheckboxes: document.querySelectorAll('.selectbox input[type="checkbox"'),
-    counts: document.querySelectorAll(".filter-small span"),
-    filter: document.querySelector('.filter'),
-    radioButtons: document.querySelectorAll('input[type="radio"')
-}
-
 const filter = {
     themeCount: 0,
     continentCount: 0,
@@ -238,50 +217,4 @@ const filter = {
     }
 };
 
-const events = {
-    currentImg: 0,
-    showModal() {
-        domElements.modal.classList.add('open');
-    },
-    showContent() {
-        if (this.currentImg === 0) {
-            domElements.back.classList.add('hide')
-            domElements.next.classList.remove('hide');
-        } else if (this.currentImg === domElements.images.length - 1) {
-            domElements.back.classList.remove('hide')
-            domElements.next.classList.add('hide')
-        } else {
-            domElements.back.classList.remove('hide')
-            domElements.next.classList.remove('hide');
-        }
-
-        domElements.modalImg.src = domElements.images[this.currentImg].querySelector('img').src;
-        domElements.modalHeading.innerHTML = domElements.images[this.currentImg].querySelector('figcaption').innerHTML;
-        domElements.modalText.innerHTML = domElements.images[this.currentImg].querySelector('p').innerHTML;
-    },
-    toggleMenu(e) {
-        const menuButton = e.target;
-        domElements.about.classList.toggle('open');
-        domElements.body.classList.toggle('fixed');
-        domElements.body.classList.toggle('white');
-        if (domElements.about.classList.contains('open')) {
-            menuButton.classList.add('hide');
-            setTimeout(() => {
-                menuButton.innerHTML = "Close";
-                menuButton.classList.add('open');
-                menuButton.classList.remove('hide');
-            }, 300);
-        } else {
-            menuButton.classList.add('hide');
-            setTimeout(() => {
-                menuButton.innerHTML = "About me";
-                menuButton.classList.remove('open');
-                menuButton.classList.remove('hide');
-            }, 300);
-        }
-    },
-    showSelectbox(index) {
-        domElements.selectbox[index].classList.toggle('open')
-    }
-}
 app.init();
