@@ -38,6 +38,21 @@ The owner of an advertising company is searching the internet for photographers 
 ### Sorted on themes
 ![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/countries.png)
 
+## Feedback test Marie
+* She wanted to go back to the pop up, but the pop up only showed once in te beginning
+* Didnt understand the checkboxes
+* Hover states should be different than active state
+* Some icons at the about me page can be nice
+
+## Modifications after testing
+* Changed the popup to the inline filter and added the styling to that filter
+* Hover and active states look different 
+* Made the filter smaller and added more "photography feeling" to it
+
+## To do
+* [ ] Responsive
+* [ ] Icons at contact page
+* [ ] More user testing!
 
 
 ## Best practice for deaf people by Marie van Driessche
