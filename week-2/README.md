@@ -24,15 +24,13 @@ App listens on `http://localhost:8080/`.
 
 ## User stories
 ### Marie
-- When I need to contact a company, I want to have multiple contact options on the website, so I can choice the right option for me
-- When I visit a website that is not written in my first language, I want to have summarized content with not to much jargon, so I can understand the content easily
-- When I watch video's online, I want to have (real) subtitles, so I can understand what they are saying.
+Marie wants to get inspiration for her next vacation. She is looking for beautiful places in Asia. Via my website filter on "asia" to see all Asian photos. She looks at the title and explanation to see where these are taken. She likes so many pictures that she no longer knows where to go. She decides to email me to get some tips about Asia.
+
 
 ### Owner of a potential agency
 The owner of an advertising company is searching the internet for photographers for his next project. He visits an article with several photographers, including me. He clicks on my website and looks through my photos if he encounters some interesting things. He finds a picture of a girl with a pink background and that is exactly in the style that he is looking for. At the next meeting he wants to show the photo to his colleagues to see what they think of it. He visits my website again and filters on 'people', so he finds the photo quickly. The colleagues also like the photo and the owner decides to contact me to hire me for the job.
 
 ## Card sorting
-
 ### Sorted on themes
 ![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/theme.png)
 
