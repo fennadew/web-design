@@ -32,7 +32,14 @@ App listens on `http://localhost:8080/`.
 - When I am looking for a new employee, I want to know a little more about them, so I can see what kind of person they are and if they would fit in the company.
 
 ## Card sorting
-![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/cardsorting.png)
+
+### Sorted on themes
+![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/theme.png)
+
+
+### Sorted on themes
+![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/countries.png)
+
 
 
 ## Best practice for deaf people by Marie van Driessche
