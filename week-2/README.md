@@ -43,6 +43,8 @@ The owner of an advertising company is searching the internet for photographers 
 ![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/countries.png)
 
 ## Feedback test Marie
+![Test](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/test.png)
+
 * She wanted to go back to the pop up, but the pop up only showed once in te beginning
 * Didnt understand the checkboxes
 * Hover states should be different than active state
