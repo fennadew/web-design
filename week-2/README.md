@@ -2,6 +2,8 @@
 This is my portfolio website. It's specially made for Marie Driessche. She is deaf. To make it more usefull for her, I added some icons to my website so she doesn't have to read everything. I used a lot of white spacing, headings and not a lot of content, Because she wants to have a quick overview of the content, and not spend to much time on a website.
 
 
+![Thumbnail](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/thumbnail.png)
+
 ## Table of Content
 - [Getting started](#getting-started)
 - [Job stories](#job-stories)
@@ -20,16 +22,14 @@ This is my portfolio website. It's specially made for Marie Driessche. She is de
 App listens on `http://localhost:8080/`.
 
 
-## Job stories
+## User stories
 ### Marie
 - When I need to contact a company, I want to have multiple contact options on the website, so I can choice the right option for me
 - When I visit a website that is not written in my first language, I want to have summarized content with not to much jargon, so I can understand the content easily
 - When I watch video's online, I want to have (real) subtitles, so I can understand what they are saying.
 
 ### Owner of a potential agency
-- When I am looking for a new employee, I want to have a quick overview from their work, so I can see what they have done.
-- When I am looking for a new employee, I want to be able to look at their code, so I can see what their level is.
-- When I am looking for a new employee, I want to know a little more about them, so I can see what kind of person they are and if they would fit in the company.
+The owner of an advertising company is searching the internet for photographers for his next project. He visits an article with several photographers, including me. He clicks on my website and looks through my photos if he encounters some interesting things. He finds a picture of a girl with a pink background and that is exactly in the style that he is looking for. At the next meeting he wants to show the photo to his colleagues to see what they think of it. He visits my website again and filters on 'people', so he finds the photo quickly. The colleagues also like the photo and the owner decides to contact me to hire me for the job.
 
 ## Card sorting
 
