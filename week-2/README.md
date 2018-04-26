@@ -6,7 +6,11 @@ This is my portfolio website. It's specially made for Marie Driessche. She is de
 
 ## Table of Content
 - [Getting started](#getting-started)
-- [Job stories](#job-stories)
+- [User stories](#user-stories)
+- [Card sorting](#card-sorting)
+- [Feedback test Marie](#feedback-test-marie)
+- [Modifications after testing](#modifications-after-testing)
+- [To do](#to-do)
 - [Best practice for deaf people by Marie van Driessche](#best-practice-deaf-people-by-marie-van-driessche)
 - [Resources](#resources)
 
