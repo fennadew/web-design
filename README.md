@@ -2,9 +2,15 @@
 This is my portfolio website. It's specially made for Marie Driessche. She is deaf. To make it more usefull for her, I added some icons to my website so she doesn't have to read everything. I used a lot of white spacing, headings and not a lot of content, Because she wants to have a quick overview of the content, and not spend to much time on a website.
 
 
+![Thumbnail](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/thumbnail.png)
+
 ## Table of Content
 - [Getting started](#getting-started)
-- [Job stories](#job-stories)
+- [User stories](#user-stories)
+- [Card sorting](#card-sorting)
+- [Feedback test Marie](#feedback-test-marie)
+- [Modifications after testing](#modifications-after-testing)
+- [To do](#to-do)
 - [Best practice for deaf people by Marie van Driessche](#best-practice-deaf-people-by-marie-van-driessche)
 - [Resources](#resources)
 
@@ -20,19 +26,39 @@ This is my portfolio website. It's specially made for Marie Driessche. She is de
 App listens on `http://localhost:8080/`.
 
 
-## Job stories
+## User stories
 ### Marie
-- When I need to contact a company, I want to have multiple contact options on the website, so I can choice the right option for me
-- When I visit a website that is not written in my first language, I want to have summarized content with not to much jargon, so I can understand the content easily
-- When I watch video's online, I want to have (real) subtitles, so I can understand what they are saying.
+Marie wants to get inspiration for her next vacation. She is looking for beautiful places in Asia. Via my website filter on "asia" to see all Asian photos. She looks at the title and explanation to see where these are taken. She likes so many pictures that she no longer knows where to go. She decides to email me to get some tips about Asia.
+
 
 ### Owner of a potential agency
-- When I am looking for a new employee, I want to have a quick overview from their work, so I can see what they have done.
-- When I am looking for a new employee, I want to be able to look at their code, so I can see what their level is.
-- When I am looking for a new employee, I want to know a little more about them, so I can see what kind of person they are and if they would fit in the company.
+The owner of an advertising company is searching the internet for photographers for his next project. He visits an article with several photographers, including me. He clicks on my website and looks through my photos if he encounters some interesting things. He finds a picture of a girl with a pink background and that is exactly in the style that he is looking for. At the next meeting he wants to show the photo to his colleagues to see what they think of it. He visits my website again and filters on 'people', so he finds the photo quickly. The colleagues also like the photo and the owner decides to contact me to hire me for the job.
 
 ## Card sorting
-![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/cardsorting.png)
+### Sorted on themes
+![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/theme.png)
+
+
+### Sorted on themes
+![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/countries.png)
+
+## Feedback test Marie
+![Test](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/test.png)
+
+* She wanted to go back to the pop up, but the pop up only showed once in te beginning
+* Didnt understand the checkboxes
+* Hover states should be different than active state
+* Some icons at the about me page can be nice
+
+## Modifications after testing
+* Changed the popup to the inline filter and added the styling to that filter
+* Hover and active states look different 
+* Made the filter smaller and added more "photography feeling" to it
+
+## To do
+* [ ] Responsive
+* [ ] Icons at contact page
+* [ ] More user testing!
 
 
 ## Best practice for deaf people by Marie van Driessche
