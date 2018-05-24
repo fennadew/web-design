@@ -4,7 +4,6 @@ export const sort = {
     type: "latest",
     sortImages() {
         const ul = document.querySelectorAll('.column');
-        const lengthHalf = (domElements.radioButtons.length / 2);
 
         for (let i = 0; i < domElements.radioButtons.length; i++) {
             if (domElements.radioButtons[i].checked) {
@@ -16,7 +15,6 @@ export const sort = {
                 domElements.radioButtons[i].checked = true;
             }
         }
-        console.log("sort")
 
         if (this.type === "latest") {
             // With help from https://stackoverflow.com/questions/8837191/sort-an-html-list-with-javascript

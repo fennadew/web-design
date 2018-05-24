@@ -93,19 +93,20 @@ button {
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
-  color: #FFF;
-  border: none;
   font-size: 1em;
   line-height: 60px;
-  background-color: $action-color;
+  color: $action-color;
+  background: transparent;
 }
 
 header button {
   z-index: 3;
   width: 120px;
   height: 60px;
+  border: none;
   overflow: hidden;
   position: relative;
+  text-align: right;
   transition: all 200ms ease;
 }
 
@@ -134,11 +135,12 @@ header {
   right: 0;
   left: 0;
   position: absolute;
-  margin-top: 30px;
-  padding: 0 70px 20px;
+  margin-top: 10px;
+  padding: 0 70px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #E6EAEA;
 }
 
 .filter {
@@ -200,10 +202,12 @@ input[type="checkbox"] + label {
 }
 input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
   border: 3px solid $action-color;
+  color: $action-color;
   opacity: 1;
 }
 input[type="checkbox"] + label:hover, input[type="radio"] + label:hover {
   border: 3px solid black;
+  color: black;
   opacity: 1;
 }
 input[type="radio"] + label {
@@ -233,13 +237,12 @@ label span {
 #about-me {
   z-index: 10;
   position: absolute;
-  background-color: $action-color;
+  background: #FFF;
   height: 60px;
   width: 120px;
   right: 70px;
   top: 30px;
   overflow: hidden;
-  color: #FFF;
   transition: width 200ms ease, height 200ms ease;
   img {
     margin: auto;
@@ -305,7 +308,7 @@ label span {
     transition: transform 200ms ease 300ms, opacity 200ms ease 300ms, line-height 200ms ease;
   }
   article {
-    background-color: $action-color;
+    background-color: #FFF;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -498,7 +501,7 @@ header button.hide {
 
 header button:before {
   content: attr(data-text);
-  color: #FFF;
+  color: $action-color;
   position: absolute;
   top: -2.75em;
 }
@@ -521,7 +524,7 @@ a {
 }
 
 .logo img {
-  width: 40px;
+  width: 30px;
 }
 
 .column {
@@ -773,28 +776,36 @@ a {
     font-family: 'Montserrat', sans-serif;
     padding: 0 70px;
 
+    .tags {
+      display: inline-block;
+      padding: 10px;
+      color: $action-color;
+      font-weight: 700;
+      font-family: d-dindin-bold, sans-serif;
+      border: 2px solid $action-color;
+    }
     img {
       position: absolute;
-      width: 30px;
-      padding-top: 30px;
+      width: 35px;
+      margin-top: -4px;
     }
     h1 {
       text-align: left;
     }
     h2 {
-      display: inline-block;
       line-height: 35px;
-      padding-top: 30px;
-      padding-left: 40px;
+      padding-top: 20px;
+      font-weight: bold;
     }
-    p {
-      padding: 30px 0;
+    .details {
+      padding-left: 45px;
+    }
+    .text {
+      padding: 25px 0;
       line-height: 1.5;
     }
   }
   time {
-    display: block;
-    font-weight: 700;
     font-family: 'Montserrat', sans-serif;
   }
 }
