@@ -15,5 +15,8 @@ export const domElements = {
     allCheckboxes: document.querySelectorAll('.selectbox input[type="checkbox"'),
     counts: document.querySelectorAll(".filter-small .count"),
     tags: document.querySelectorAll('.tags'),
-    radioButtons: document.querySelectorAll('input[type="radio"')
+    radioButtons: document.querySelectorAll('input[type="radio"'),
+    popUptext: document.querySelector('.popup-text'),
+    popUp: document.querySelector('.popup'),
+    buttonPop: document.querySelector('.popup button'),
 }

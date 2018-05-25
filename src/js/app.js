@@ -14,7 +14,12 @@ const app = {
             class_error: 'll-error',
         });
 
-        domElements.radioButtons[0].checked = true
+        domElements.radioButtons[0].checked = true;
+
+        domElements.buttonPop.addEventListener('click', () => {
+            domElements.popUp.classList.toggle('down');
+        });
+
 
         domElements.modalImg.addEventListener('click', () => {
             domElements.modalImg.classList.toggle('full-width');

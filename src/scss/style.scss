@@ -209,7 +209,7 @@ input[type="checkbox"] + label {
   opacity: 0.5;
   font-family: d-dindin-bold, sans-serif;
   border-radius: 50%;
-  transition: all 100ms ease;
+  transition: all 200ms ease;
 }
 input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
   border: 3px solid $action-color;
@@ -273,6 +273,84 @@ label span {
   }
 }
 
+.popup {
+  position: fixed;
+  bottom: 0;
+  right: 70px;
+  width: 300px;
+  height: 220px;
+  padding: 15px;
+  border: 1px solid #E6EAEA;
+  background-color: #FFF;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  &.down {
+    height: 120px;
+    .popup-text {
+      display: none;
+    }
+    button {
+      transform: rotate(180deg);
+    }
+  }
+  span {
+    font-weight: 700;
+    font-family: d-dindin-bold, sans-serif;
+    font-size: 18px;
+  }
+  p {
+    width: 100%;
+    background: #F1F4F7;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  a {
+    color: $action-color;
+    font-family: d-dindin-bold, sans-serif;
+    font-size: 18px;
+    position: relative;
+    &:hover:after {
+      animation: bouncehand 1s infinite;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      background: url("../images/pointing-right.svg") no-repeat center center;
+      background-size: 25px;
+      width: 25px;
+      height: 25px;
+      display: block;
+      top: -2px;
+      right: -32px;
+    }
+  }
+  button {
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding: 0;
+    width: 30px;
+    background: url("../images/down-arrow.svg") no-repeat center;
+    background-size: 20px;
+    line-height: 1;
+    overflow: hidden;
+    text-indent: -100px;
+    transform: rotate(0);
+    transition: transform 200ms ease;
+    &:hover, &:focus {
+      line-height: 18px;
+    }
+  }
+  .popup-text {
+    margin-top: 20px;
+    opacity: 1;
+  }
+}
+
 #contact {
   position: relative;
   height: calc(100vh - 85px);
@@ -293,10 +371,10 @@ label span {
     height: 42px;
     padding: 0 15px;
     margin-bottom: 25px;
-    border: 2px solid #E6EAEA;
+    border: 2px solid #FFF;
   }
   textarea {
-    border: 2px solid #E6EAEA;
+    border: 2px solid #FFF;
     resize: none;
   }
   button {
@@ -474,19 +552,32 @@ label span {
     background-position: 50% 50%;
   }
   50% {
-    background-position: 30% 50%;
+    background-position: 0 50%;
   }
   100% {
     background-position: 50% 50%;
   }
 }
 
+@keyframes bouncehand {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
 @keyframes bounceright {
   0% {
     background-position: 50% 50%;
   }
   50% {
-    background-position: 70% 50%;
+    background-position: 100% 50%;
   }
   100% {
     background-position: 50% 50%;
@@ -678,7 +769,7 @@ a {
 
 .navigation {
   height: 70px;
-  width: 70px;
+  width: 40px;
   position: absolute;
   padding: 0;
   text-indent: -399px;
@@ -691,6 +782,7 @@ a {
 .navigation.left {
   right: 80px;
   background-image: url("../images/back.svg");
+  padding-right: 10px;
   &:hover {
     animation: bounceleft 800ms infinite ease;
   }
@@ -698,6 +790,7 @@ a {
 
 .navigation.right {
   right: 0;
+  padding-left: 10px;
   background-image: url("../images/next.svg");
   &:hover {
     animation: bounceright 800ms infinite ease;
@@ -737,7 +830,7 @@ a {
 }
 
 @media screen and (max-width: 750px) {
-  section:nth-of-type(2) > div {
+  section:nth-of-type(2) > div, .filter-small form {
     flex-wrap: wrap;
   }
   .column {
@@ -799,11 +892,16 @@ a {
       font-weight: 700;
       font-family: d-dindin-bold, sans-serif;
       border: 2px solid $action-color;
+      transition: all 200ms ease;
+      &:hover {
+        border: 2px solid #000;
+        color: #000;
+      }
     }
     img {
       position: absolute;
-      width: 35px;
-      margin-top: -4px;
+      width: 42px;
+      margin-top: -8px;
     }
     h1 {
       text-align: left;
@@ -814,10 +912,13 @@ a {
       font-weight: bold;
     }
     .details {
-      padding-left: 45px;
+      padding-left: 49px;
+      &:first-of-type {
+        margin-top: -3px;
+        padding-bottom: 5px;
+      }
     }
     .text {
-      padding: 25px 0;
       line-height: 1.5;
     }
   }
