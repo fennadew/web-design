@@ -1,17 +1,17 @@
 # Portfolio
-This is my portfolio website. It's specially made for Marie Driessche. She is deaf. To make it more usefull for her, I added some icons to my website so she doesn't have to read everything. I used a lot of white spacing, headings and not a lot of content, Because she wants to have a quick overview of the content, and not spend to much time on a website.
-
-
-![Thumbnail](https://github.com/fennadew/web-design/blob/master/src/images/thumbnail.png)
-
-
-
 ## Feedback
 | Feedback                | Verbetering              |
 | ----------------------- |:------------------------| 
 | About me menu item attracks to much attention. | Made the about me button more subtle. Also added a contact menu item. |
 | Finish the user flow. | Added tags on the detail page. |  
 | Finish the user story. | Added a popup message with a call to action at the detail page |  
+
+
+
+
+This is my portfolio website. It's specially made for Marie Driessche. She is deaf. To make it more usefull for her, I added some icons to my website so she doesn't have to read everything. I used a lot of white spacing, headings and not a lot of content, Because she wants to have a quick overview of the content, and not spend to much time on a website.
+
+![Thumbnail](https://github.com/fennadew/web-design/blob/master/src/images/thumbnail.png)
 
 
 ## Table of Content
