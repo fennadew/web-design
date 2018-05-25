@@ -2,7 +2,7 @@
 ## Feedback
 | Feedback                | Verbetering              |
 | ----------------------- |:------------------------| 
-| About me menu item attracks to much attention. | Made the about me button more subtle. Also added a contact menu item. |
+| About me menu item attracks to much attention. | Made the about me link more subtle. Also added a contact menu item. |
 | Finish the user flow. | Added tags on the detail page. |  
 | Finish the user story. | Added a popup message with a call to action at the detail page |  
 
