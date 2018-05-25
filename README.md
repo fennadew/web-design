@@ -4,6 +4,16 @@ This is my portfolio website. It's specially made for Marie Driessche. She is de
 
 ![Thumbnail](https://github.com/fennadew/web-design/blob/master/src/images/thumbnail.png)
 
+
+
+## Feedback
+| Feedback                | Verbetering              |
+| ----------------------- |:------------------------| 
+| About me menu item attracks to much attention. | Made the about me button more subtle. Also added a contact menu item. |
+| Finish the user flow. | Added tags on the detail page. |  
+| Finish the user story | Added a popup message with a call to action at the detail page |  
+
+
 ## Table of Content
 - [Getting started](#getting-started)
 - [User stories](#user-stories)
