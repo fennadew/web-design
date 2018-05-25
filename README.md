@@ -7,8 +7,7 @@
 | Finish the user story. | Added a popup message with a call to action at the detail page |  
 
 
-
-
+## The website
 This is my portfolio website. It's specially made for Marie Driessche. She is deaf. To make it more usefull for her, I added some icons to my website so she doesn't have to read everything. I used a lot of white spacing, headings and not a lot of content, Because she wants to have a quick overview of the content, and not spend to much time on a website.
 
 ![Thumbnail](https://github.com/fennadew/web-design/blob/master/src/images/thumbnail.png)
