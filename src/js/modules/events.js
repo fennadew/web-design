@@ -21,7 +21,9 @@ export const events = {
         }
 
         domElements.tags[0].innerHTML = domElements.images[i].getAttribute('data-theme');
+        domElements.tags[0].setAttribute('href', '#');
         domElements.tags[1].innerHTML = domElements.images[i].getAttribute('data-continent');
+        domElements.tags[1].setAttribute('href', '#');
         domElements.modalImg.src = domElements.images[i].querySelector('img').getAttribute('data-src');
         domElements.modalHeading.innerHTML = domElements.images[i].querySelector('figcaption').innerHTML;
         domElements.modalText.innerHTML = domElements.images[i].querySelector('p').innerHTML;

@@ -20,9 +20,6 @@ const app = {
             domElements.modalImg.classList.toggle('full-width');
         });
 
-        domElements.menuButton.addEventListener('click', (e) => {
-            events.toggleMenu(e);
-        });
         for (let i = 0; i < domElements.images.length; i++) {
             domElements.images[i].setAttribute('href', '#photos/' + i);
         }
@@ -31,6 +28,34 @@ const app = {
                 sort.sortImages("radio");
             });
         }
+
+
+        domElements.tags.forEach(function(link, index) {
+            link.addEventListener('click', (e) => {
+                filter.themeCount = 0;
+                filter.continentCount = 0;
+
+                for (let i = 0; i < domElements.checkboxesContinent.length; i++) {
+                            if (domElements.checkboxesContinent[i].value === e.target.innerHTML) {
+                                domElements.checkboxesContinent[i].checked = true;
+                                filter.continentCount += 1;
+                            } else {
+                                domElements.checkboxesContinent[i].checked = false;
+                            }
+                            filter.showSelection('continent');
+                }
+                for (let i = 0; i < domElements.checkboxesTheme.length; i++) {
+                    if (domElements.checkboxesTheme[i].value === e.target.innerHTML) {
+                        domElements.checkboxesTheme[i].checked = true;
+                        filter.themeCount += 1;
+                    } else {
+                        domElements.checkboxesTheme[i].checked = false;
+                    }
+                    filter.showSelection('theme');
+                }
+            });
+        });
+
 
         for (let i = 0; i < domElements.checkboxesContinent.length; i++) {
             domElements.checkboxesContinent[i].addEventListener('click', ((i) => {

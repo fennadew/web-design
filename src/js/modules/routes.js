@@ -8,6 +8,12 @@ export const routes = {
             '': function () {
                 sections.toggle('home')
             },
+            'about': function() {
+                sections.toggle('about');
+            },
+            'contact': function() {
+                sections.toggle('contact');
+            },
             'photos/:name': function (name) {
                 sections.toggle('details');
                 events.showContent(name);

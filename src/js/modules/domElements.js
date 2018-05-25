@@ -1,7 +1,6 @@
 export const domElements = {
     about: document.querySelector('#about-me'),
     body: document.querySelector('body'),
-    menuButton: document.querySelector('header button'),
     images: document.querySelectorAll('.showcase a'),
     modalImg: document.querySelector('#details img'),
     modalHeading: document.querySelector('#details h1'),

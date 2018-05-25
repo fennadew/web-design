@@ -12,23 +12,50 @@
 <body>
 <header>
     <a href="#" class="logo"><img src="dist/images/logo-pink.svg" alt="logo"></a>
-    <button data-text="About me">About me</button>
+    <nav>
+        <a href="#about" data-text="About">About</a>
+        <a href="#contact" data-text="Contact">Contact</a>
+    </nav>
 </header>
 <main>
-    <section id="about-me">
-        <article>
-            <h1>About me</h1>
-            <img src="dist/images/fenna.png" alt="Photo of me">
-            <p>My name is Fenna de Wilde. I am a 21 year old Communication & Multimedia student at the Hogeschool
-                van
-                Amsterdam. I am currently in my third year, where I want to grow as a front-end developer.</p>
-            <a href="mailto:fennadewilde@hotmail.com" data-text="fennadewilde@hotmail.com">Email me</a>
-            <a href="tel:+31651753127" data-text="+31651753127">Call me</a>
-            <p><q>&quot;For me to be in a creative environment while doing something technical is something that
-                makes
-                me more than
-                happy.&quot;</q></p>
-        </article>
+    <section id="about" class="route">
+        <div class="detail-content">
+            <img src="dist/images/fenna.jpg" alt="Photo of me">
+            <article>
+                <h1>About me</h1>
+                <p>My name is Fenna de Wilde. I am a 21 year old Communication & Multimedia student at the Hogeschool
+                    van
+                    Amsterdam. I am currently in my third year, where I want to grow as a front-end developer.</p>
+                <p><q>&quot;For me to be in a creative environment while doing something technical is something that
+                    makes
+                    me more than
+                    happy.&quot;</q></p>
+            </article>
+        </div>
+    </section>
+    <section id="contact" class="route">
+        <div class="detail-content">
+            <section>
+                <h1>Contact</h1>
+                <p>
+                    Would you like to start a project with me or maybe you would like some more information about my work, please send me a message via whatsapp or email</p>
+                <a href="mailto:fennadewilde@hotmail.com" data-text="fennadewilde@hotmail.com">Email me</a>
+                <a href="tel:+31651753127" data-text="+31651753127">Call me</a>
+            </section>
+            <section>
+                <form>
+                    <fieldset>
+                        <legend>Contact</legend>
+                        <label>Name</label>
+                        <input type="text" name="name">
+                        <label>Email</label>
+                        <input type="email" name="email">
+                        <label>What would you like to tell me</label>
+                        <textarea rows="4" cols="50"></textarea>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
     </section>
     <section id="home" class="showcase route">
         <h1>Latest work</h1>
@@ -77,7 +104,7 @@
                 </div>
             </form>
         </aside>
-        <div>
+        <div class="container">
             <div class="column">
                 <a href="#" data-theme="nature" data-continent="asia">
                     <figure>
@@ -372,9 +399,12 @@
                 <a href="" class="tags"></a>
                 <h2>Details</h2>
                 <img src="dist/images/photo-camera.svg" alt="photo camera">
-                <p class="details">Photographed at: <time datetime=>26-07-2017</time></p>
+                <p class="details">Photographed at:
+                    <time datetime=>26-07-2017</time>
+                </p>
                 <p class="details">Photographed with: Nikon D5100</p>
-                <p class="text">Shot during my vacation on the Maledives. Took a 2 hour helicopter flight the beautiful beaches from
+                <p class="text">Shot during my vacation on the Maledives. Took a 2 hour helicopter flight the beautiful
+                    beaches from
                     above. Been traveling there for almost 3 months. The water was so blue and the beaches so white. The
                     atmosphere was really nice. Would definitely go back there.</p>
             </article>
