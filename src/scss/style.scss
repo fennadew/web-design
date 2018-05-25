@@ -100,8 +100,12 @@ button {
 }
 
 main {
-  margin-top: 130px;
+  margin-top: 85px;
+  > section {
+    padding-top: 40px;
+  }
 }
+
 
 h1 {
   font-family: d-dindin-bold, sans-serif;
@@ -129,6 +133,7 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #E6EAEA;
+  background: #FFF;
  nav a {
     z-index: 3;
     width: 100px;
@@ -269,8 +274,65 @@ label span {
 }
 
 #contact {
+  position: relative;
+  height: calc(100vh - 85px);
   section {
     width: 50%;
+    &:first-child {
+      padding-right: 120px;
+    }
+    &:last-child {
+      margin-top: 87px;
+      padding-left: 120px;
+    }
+  }
+  legend {
+    display: none;
+  }
+  input {
+    height: 42px;
+    padding: 0 15px;
+    margin-bottom: 25px;
+    border: 2px solid #E6EAEA;
+  }
+  textarea {
+    border: 2px solid #E6EAEA;
+    resize: none;
+  }
+  button {
+    border: 2px solid #FFF;
+    color: #FFF;
+    line-height: 42px;
+    transition: line-height 200ms ease;
+    height: 44px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    &:hover, &:focus {
+      line-height: 130px;
+      outline: none;
+    }
+    &:before {
+      content: attr(data-text);
+      color: #FFF;
+      position: absolute;
+      top: -2.75em;
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  label {
+    text-transform: uppercase;
+    font-family: d-dindin-bold, sans-serif;
+    margin-bottom: 15px;
+    color: #FFF;
+
+  }
+  label,input, textarea {
+    width: 100%;
+    display: block;
   }
   h1 {
     text-align: left;
@@ -321,6 +383,16 @@ label span {
   color: #FFF;
   margin: 0 70px;
   text-shadow: 2px 2px rgba(0,0,0,0.3);
+}
+
+.bg {
+  z-index: -1;
+  position: absolute;
+  background: $action-color;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
 }
 
 .filter-small {
@@ -758,8 +830,16 @@ a {
   #about p {
     margin: 40px 0;
   }
+  section:nth-of-type(2)>div {
+    display: block;
+  }
+  .bg {
+    width: 100%;
+    bottom: 0;
+    top: auto;
+    height: 450px;
+  }
   .detail-content, #about {
-    flex-wrap: wrap;
     img {
       position: relative;
     }
@@ -774,9 +854,19 @@ a {
       width: 100%;
     }
   }
+  #contact {
+    height: auto;
+    section {
+      width: 100%;
+      &:first-child,  &:last-child {
+        padding: 0;
+      }
+    }
+  }
 }
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 50px 0;
 }

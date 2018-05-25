@@ -46,16 +46,18 @@
                 <form>
                     <fieldset>
                         <legend>Contact</legend>
-                        <label>Name</label>
-                        <input type="text" name="name">
-                        <label>Email</label>
-                        <input type="email" name="email">
-                        <label>What would you like to tell me</label>
-                        <textarea rows="4" cols="50"></textarea>
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email">
+                        <label for="message">What would you like to tell me</label>
+                        <textarea id="message" rows="4" cols="50"></textarea>
+                        <button data-text="Submit">Submit</button>
                     </fieldset>
                 </form>
             </section>
         </div>
+        <div class="bg"></div>
     </section>
     <section id="home" class="showcase route">
         <h1>Latest work</h1>
