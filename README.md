@@ -36,11 +36,11 @@ The owner of an advertising company is searching the internet for photographers 
 
 ## Card sorting
 ### Sorted on themes
-![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/theme.png)
+![Card sorting](https://github.com/fennadew/web-design/blob/master/dist/images/sort2.png)
 
 
 ### Sorted on themes
-![Card sorting](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/countries.png)
+![Card sorting](https://github.com/fennadew/web-design/blob/master/dist/images/sort1.png)
 
 ## Feedback test Marie
 ![Test](https://github.com/fennadew/web-design/blob/master/week-2/dist/images/test.png)
